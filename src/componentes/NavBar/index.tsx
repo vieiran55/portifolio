@@ -10,9 +10,9 @@ import { useEffect, useRef, useState } from "react";
 import estilos from "./NavBar.module.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "tw-elements";
-import gitSmall from "../../imgs/githubSmall.png";
-import linkedinSmall from "../../imgs/linkedinSmall.png";
-import emailSmall from "../../imgs/emailSmall.png";
+import gitSmall from "../../images/githubSmall.png";
+import linkedinSmall from "../../images/linkedinSmall.png";
+import emailSmall from "../../images/emailSmall.png";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
@@ -72,9 +72,11 @@ export default function NavBar() {
             aria-haspopup="true"
             onClick={handleToggle}
             sx={{
-              width: "50px", height: "50px", "&:hover": {
+              width: "50px",
+              height: "50px",
+              "&:hover": {
                 backgroundColor: "#333333",
-              }
+              },
             }}
           >
             <GiHamburgerMenu className={estilos.mobile__icon} />
@@ -114,28 +116,74 @@ export default function NavBar() {
           </Popper>
         </Stack>
         <ol className={estilos.mobile__sociais}>
-          <Link to={"teste"} className={estilos.mobile__links}><img src={linkedinSmall} className={estilos.mobile__links__icons} alt={linkedinSmall} /> Linkedin</Link>
-          <Link to={"teste"} className={estilos.mobile__links}><img src={gitSmall} className={estilos.mobile__links__icons} alt={gitSmall} />Github</Link>
-          <Link to={"teste"} className={estilos.mobile__links}><img src={emailSmall} className={estilos.mobile__links__icons} alt={emailSmall} />Contato</Link>
+          <Link to={"teste"} className={estilos.mobile__links}>
+            <img
+              src={linkedinSmall}
+              className={estilos.mobile__links__icons}
+              alt={linkedinSmall}
+            />{" "}
+            Linkedin
+          </Link>
+          <Link to={"teste"} className={estilos.mobile__links}>
+            <img
+              src={gitSmall}
+              className={estilos.mobile__links__icons}
+              alt={gitSmall}
+            />
+            Github
+          </Link>
+          <Link to={"teste"} className={estilos.mobile__links}>
+            <img
+              src={emailSmall}
+              className={estilos.mobile__links__icons}
+              alt={emailSmall}
+            />
+            Contato
+          </Link>
         </ol>
       </div>
       {/* desktop */}
       <div className={estilos.conteinerDesktop}>
         <div>
           <h1 className={estilos.conteinerDesktop__destaqueTitulo}>
-            <a className={estilos.conteinerDesktop__destaqueTitulo__1}>ANTONIO</a>
-            <a className={estilos.conteinerDesktop__destaqueTitulo__2}>VIEIRA</a>
+            <a className={estilos.conteinerDesktop__destaqueTitulo__1}>
+              ANTONIO
+            </a>
+            <a className={estilos.conteinerDesktop__destaqueTitulo__2}>
+              VIEIRA
+            </a>
           </h1>
         </div>
         <ol className={estilos.conteinerDesktop__opcoes}>
-          <li>Sobre</li>
-          <li>Skills</li>
-          <li>Projetos</li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>Sobre</li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>Skills</li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>Projetos</li>
         </ol>
         <ol className={estilos.conteinerDesktop__sociais}>
-          <Link to={"teste"} className={estilos.mobile__links}><img src={linkedinSmall} className={estilos.mobile__links__icons} alt={linkedinSmall} /> Linkedin</Link>
-          <Link to={"teste"} className={estilos.mobile__links}><img src={gitSmall} className={estilos.mobile__links__icons} alt={gitSmall} />Github</Link>
-          <Link to={"teste"} className={estilos.mobile__linksEmail}><img src={emailSmall} className={estilos.mobile__links__icons} alt={emailSmall} />Contato</Link>
+          <Link to={"teste"} className={estilos.mobile__links}>
+            <img
+              src={linkedinSmall}
+              className={estilos.mobile__links__icons}
+              alt={linkedinSmall}
+            />{" "}
+            Linkedin
+          </Link>
+          <Link to={"teste"} className={estilos.mobile__links}>
+            <img
+              src={gitSmall}
+              className={estilos.mobile__links__icons}
+              alt={gitSmall}
+            />
+            Github
+          </Link>
+          <Link to={"teste"} className={estilos.mobile__linksEmail}>
+            <img
+              src={emailSmall}
+              className={estilos.mobile__links__icons}
+              alt={emailSmall}
+            />
+            Contato
+          </Link>
         </ol>
       </div>
     </div>

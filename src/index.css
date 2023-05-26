@@ -5,6 +5,5 @@
 
 
 #root{
-  height: 100vh;
   @apply bg-black text-white;
 }

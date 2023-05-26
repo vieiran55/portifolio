@@ -22,8 +22,14 @@
   }
   &__opcoes{
     @apply flex flex-row  items-center justify-around text-center w-2/6;
-    &:hover{
-      @apply border-4 border-verdeLoud rounded-md;
+    @media screen and (min-width: $desktop_xl) {
+      @apply w-1/6;
+    }
+    &__links{
+      @apply w-full;
+      &:hover{
+        @apply border-4 border-verdeLoud rounded-md cursor-pointer;
+      }
     }
   }
   &__sociais{

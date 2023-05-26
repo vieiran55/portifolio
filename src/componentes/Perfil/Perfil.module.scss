@@ -1,0 +1,57 @@
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+.perfil{
+  @apply flex flex-col items-center justify-around;
+  @media screen and (min-width: $tablet) {
+    @apply flex-row-reverse;
+  }
+  &__conteiner__avatar{
+    @media screen and (min-width: $desktop_xl) {
+      @apply p-8;
+    }
+  }
+  &__avatar{
+    @apply h-60 w-60;
+    @media screen and (min-width: $tablet) {
+      @apply h-72 w-72;
+    }
+    @media screen and (min-width: $desktop_xl) {
+      @apply h-full w-full;
+    }
+  }
+  &__titulos{
+    font-family: "Roboto", sans-serif;
+    @apply text-white flex flex-col justify-between;
+    @media screen and (min-width: $tablet) {
+      @apply h-44;
+    }
+    @media screen and (min-width: $desktop_xl) {
+      @apply h-60 p-4;
+    }
+    &__ola{
+      @apply text-lg py-1;
+      @media screen and (min-width: $tablet) {
+        @apply text-3xl;
+      }
+    }
+    &__nome{
+      @apply text-4xl py-1 text-verdeLoud font-bold;
+      @media screen and (min-width: $tablet) {
+        @apply text-[3rem];
+      }
+      @media screen and (min-width: $desktop_xl) {
+        @apply text-[5rem];
+      }
+    }
+    &__prof{
+      @apply text-xl py-1;
+      @media screen and (min-width: $tablet) {
+        @apply text-4xl ;
+      }
+    }
+  }
+}
