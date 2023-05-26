@@ -2,7 +2,10 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js"
+  ],
   theme: {
     extend: {
       colors: {
@@ -17,7 +20,8 @@ module.exports = {
         hover: "#1057B0",
         azulMarinho: "#3772FF",
         ateneoBlue: "#0A4D68",
-        metallicSeaweed: "#088395"
+        metallicSeaweed: "#088395",
+        verdeLoud: "#70FF00"
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -73,7 +77,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tw-elements/dist/plugin")
-  ],
+  plugins:  [require("tw-elements/dist/plugin.cjs")],
 };
