@@ -54,7 +54,7 @@ export default function NavBar() {
     prevOpen.current = open;
   }, [open]);
   return (
-    <div>
+    <div className={estilos.navbar}>
       <div>
         <h1 className={estilos.destaqueTitulo}>
           <a className={estilos.destaqueTitulo__1}>ANTONIO</a>

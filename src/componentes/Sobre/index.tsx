@@ -36,13 +36,13 @@ export default function Sobre() {
         <div className={estilos.sobre__cards__conteiner}>
           <div>
             <h1 className={estilos.sobre__cards__titulo}>
-              Desenvolvedor Fullstack Jr.
+              Freelancer
             </h1>
             <Link to={"/"} className={estilos.sobre__cards__link}>
               Entre em contato comigo!
             </Link>
           </div>
-          <h1 className={estilos.sobre__cards__simbol}>{"{ }"}</h1>
+          <h1 className={estilos.sobre__cards__simbol}>{"{}"}</h1>
         </div>
       </div>
     </div>

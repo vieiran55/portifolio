@@ -1,0 +1,62 @@
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "react-slideshow-image/dist/styles.css";
+
+@media screen and (max-width: 2000px) {
+  /* Defina um valor adequado para o tamanho máximo */
+  .projetos {
+    /* Adicione as propriedades necessárias para ajustar o layout */
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+
+.projetos{
+  @apply flex flex-col;
+  &__titulos{
+    @apply flex flex-row mb-2;
+  }
+  &__titulo{
+    @apply text-verdeLoud text-lg font-bold;
+    @media screen and (min-width: $desktop_xl) {
+      @apply text-3xl;
+    }
+  }
+  &__titulo2{
+    @apply text-white text-lg mx-1;
+    @media screen and (min-width: $desktop_xl) {
+      @apply text-3xl;
+    }
+  }
+  &__item{
+    @apply flex h-[70vw] flex-col bg-green-700 border-2 border-blue-100 rounded-md cursor-pointer my-4;
+    &:hover{
+      @apply border-verdeLoud;
+    }
+    &__imagem{
+      @apply h-full w-80;
+    }
+    &__elementos__conteiner{
+      @apply -mt-20 z-20 py-4;
+    }
+    &__titulo{
+      @apply z-20 px-2 ;
+    }
+    &__tag{
+      @apply flex flex-row;
+      &__icon{
+        @apply mx-2
+      }
+    }
+  }
+}

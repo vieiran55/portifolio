@@ -5,6 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 
+.navbar{
+  @apply w-full;
+  @media screen and (min-width: $desktop_xl) {
+    @apply w-9/12;
+  }
+}
+
 .conteinerDesktop{
   @apply text-white flex flex-row justify-around py-3 px-2;
   @media screen and (max-width: $tablet) {

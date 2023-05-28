@@ -5,13 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .perfil{
-  @apply flex flex-col items-center justify-around;
+  @apply flex flex-col items-center justify-center w-full;
   @media screen and (min-width: $tablet) {
-    @apply flex-row-reverse;
+    @apply flex-row-reverse justify-evenly;
   }
   &__conteiner__avatar{
     @media screen and (min-width: $desktop_xl) {
-      @apply p-8;
+      @apply py-8 justify-center;
     }
   }
   &__avatar{
@@ -25,12 +25,12 @@
   }
   &__titulos{
     font-family: "Roboto", sans-serif;
-    @apply text-white flex flex-col justify-between;
+    @apply text-white flex flex-col justify-evenly;
     @media screen and (min-width: $tablet) {
       @apply h-44;
     }
     @media screen and (min-width: $desktop_xl) {
-      @apply h-60 p-4;
+      @apply h-60 py-4;
     }
     &__ola{
       @apply text-lg py-1;
