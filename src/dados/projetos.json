@@ -3,24 +3,18 @@
     "id": 1,
     "titulo": "Exemplo de Item",
     "link": "https://www.example.com",
-    "image": "https://www.example.com/images/item.jpg"
+    "image": "/images/modelo.png"
   },
   {
     "id": 2,
     "titulo": "Exemplo de Item",
     "link": "https://www.example.com",
-    "image": "https://www.example.com/images/item.jpg"
+    "image": "/images/modelo2.png"
   },
   {
     "id": 3,
     "titulo": "Exemplo de Item",
     "link": "https://www.example.com",
-    "image": "https://www.example.com/images/item.jpg"
-  },
-  {
-    "id": 4,
-    "titulo": "Exemplo de Item",
-    "link": "https://www.example.com",
-    "image": "https://www.example.com/images/item.jpg"
-  }   
+    "image": "/images/modelo3.png"
+  }
 ]

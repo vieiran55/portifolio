@@ -60,3 +60,45 @@
     }
   }
 }
+
+.conteiner{
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply  max-w-[1300px] h-full w-full m-auto py-16 px-4 relative flex flex-col items-center;
+  &:hover .botaoLeft{
+    @apply block;
+  }
+  &:hover .botaoRight{
+    @apply block;
+  }
+}
+
+.image{
+  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500;
+}
+
+// .botaoLeft{
+//   @apply hidden  absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
+// }
+
+.botaoLeft{
+  @apply block absolute top-[40%] -translate-x-0 translate-y-[40%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
+  @media screen and (min-width: $tablet) {
+    @apply hidden;
+  }
+}
+
+
+.botaoRight{
+  @apply block  absolute top-[40%] -translate-x-0 translate-y-[40%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
+  @media screen and (min-width: $tablet) {
+    @apply hidden;
+  }
+}
+
+.pontos{
+  @apply flex top-4 justify-center py-2;
+  &__pontos{
+    @apply text-2xl cursor-pointer;
+  }
+}
