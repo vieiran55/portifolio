@@ -41,15 +41,25 @@
       @apply h-full w-80;
     }
     &__elementos__conteiner{
-      
+      @apply rounded-b-lg py-1;
+      @media screen and (max-width: $tablet) {
+        @apply hidden;
+      }
+    }
+    &__elementos__conteinerPrincipal{
+      background-color: rgba(128, 128, 128, 0.5);
+      @apply rounded-b-lg py-1;
     }
     &__titulo{
       @apply z-20 px-2 ;
     }
     &__tag{
-      @apply flex flex-row;
+      @apply flex flex-row text-center;
       &__icon{
-        @apply mx-2
+        @apply mx-2 w-12 h-7 border-2 rounded-md;
+      }
+      &__iconPrincipal{
+        @apply mx-2 w-12 h-7 border-2 rounded-md;
       }
     }
   }
@@ -58,30 +68,48 @@
 .conteiner{
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 20px; /* Ajuste a quantidade de padding conforme necessário */
-  pointer-events: none;
+  pointer-events: all;
   @apply  max-w-[1300px] h-full w-full m-auto py-16 px-4 relative flex flex-col items-center;
-  &:hover .botaoLeft{
-    @apply block;
+  @media screen and (min-width: 670px) {
+    pointer-events: all;
+    &:hover .botaoLeft{
+      @apply block;
+    }
+    &:hover .botaoRight{
+      @apply block;
+    }
   }
-  &:hover .botaoRight{
-    @apply block;
   }
-}
 
 .conteinerFotos{
-  @apply flex flex-row relative w-[90vw];
   scroll-snap-type: x mandatory;
+  @apply flex flex-row relative w-[90vw] items-center ;
+  @media screen and (min-width: 2000px) {
+    @apply w-[375px] h-[350px] w-full;
+  } 
 }
 
 .image{
   flex: 0 0 auto;
   scroll-snap-align: center;
-  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2;
+  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1;
+  @media screen and (min-width: 670px) {
+    @apply h-[330px];
+  }
+  @media screen and (min-width: 950px) {
+    @apply h-[430px];
+  }
+  @media screen and (min-width: 1050px) {
+    @apply w-[550px] h-[410px];
+  }
+  @media screen and (min-width: 2000px) {
+    @apply w-[375px] h-[350px];
+  } 
 }
-.teste{
+.primeiro{
   @apply -ml-72;
   @media screen and (min-width: 470px) {
     @apply -ml-60;
@@ -90,16 +118,73 @@
     @apply -ml-52;
   }
   @media screen and (min-width: 670px) {
-    @apply -ml-36;
+    @apply -ml-60;
   }
   @media screen and (min-width: 700px) {
-    @apply -ml-20;
+    @apply -ml-56;
   }
   @media screen and (min-width: 800px) {
-    @apply -ml-10;
+    @apply -ml-56;
   }
   @media screen and (min-width: 1000px) {
-    @apply -ml-0;
+    @apply -ml-60;
+  }
+  @media screen and (min-width: 1050px) {
+    @apply -ml-[30rem];
+  }
+  @media screen and (min-width: 1200px) {
+    @apply -ml-96;
+  }
+  @media screen and (min-width: 1300px) {
+    @apply -ml-[23rem];
+  }
+  @media screen and (min-width: 1400px) {
+    @apply -ml-[20rem];
+  }
+  @media screen and (min-width: 1600px) {
+    @apply -ml-[15rem];
+  }
+  @media screen and (min-width: 1700px) {
+    @apply -ml-[13rem];
+  }
+  @media screen and (min-width: 1800px) {
+    @apply -ml-[9rem];
+  }
+  @media screen and (min-width: 1900px) {
+    @apply -ml-[6rem];
+  }
+  @media screen and (min-width: 2000px) {
+    @apply -ml-[0];
+  }
+}
+
+.principal{
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  @apply w-[300px] h-[270px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 border-verdeLoud;
+  @media screen and (min-width: 410px) {
+    @apply w-[350px] h-[290px];
+  }
+  @media screen and (min-width: 670px) {
+    @apply w-[470px] h-[380px];
+  }
+  @media screen and (min-width: 700px) {
+    @apply w-[550px] h-[410px];
+  }
+  @media screen and (min-width: 850px) {
+    @apply w-[600px] h-[410px];
+  }
+  @media screen and (min-width: 950px) {
+    @apply w-[720px] h-[510px];
+  }
+  @media screen and (min-width: 1050px) {
+    @apply w-[800px] h-[550px];
+  }
+  @media screen and (min-width: 1600px) {
+    @apply w-[840px] h-[600px];
+  }
+  @media screen and (min-width: 2000px) {
+    @apply w-[510px] h-[410px];
   }
 }
 
@@ -109,22 +194,22 @@
 
 .botaoLeft{
   pointer-events: all;
-  @apply block absolute top-[40%] -translate-x-0 translate-y-[40%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
+  @apply block absolute top-[40%] -translate-x-0 translate-y-[40%] left-5 text-2xl rounded-full p-2 bg-verdeLoud/70 text-black cursor-pointer;
   @media screen and (min-width: $tablet) {
     @apply hidden;
   }
 }
 
-
 .botaoRight{
   pointer-events: all;
-  @apply block  absolute top-[40%] -translate-x-0 translate-y-[40%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
+  @apply block bg-verdeLoud/70 absolute top-[40%] -translate-x-0 translate-y-[40%] right-5 text-2xl rounded-full p-2 text-black cursor-pointer;
   @media screen and (min-width: $tablet) {
     @apply hidden;
   }
 }
 
 .pontos{
+  pointer-events: all;
   @apply flex top-4 justify-center py-2;
   &__pontos{
     @apply text-2xl cursor-pointer;
