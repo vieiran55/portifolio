@@ -13,7 +13,7 @@ export default function AppRouter() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Rodape />
+        {/* <Rodape /> */}
       </Router>
     </div>
   );

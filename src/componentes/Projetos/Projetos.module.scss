@@ -4,12 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
-@import "../../../node_modules/slick-carousel/slick/slick.css";
-@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
-
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
-@import "react-slideshow-image/dist/styles.css";
 
 @media screen and (max-width: 2000px) {
   /* Defina um valor adequado para o tamanho máximo */
@@ -22,7 +16,7 @@
 
 
 .projetos{
-  @apply flex flex-col;
+  @apply flex flex-col w-11/12;
   &__titulos{
     @apply flex flex-row mb-2;
   }
@@ -47,7 +41,7 @@
       @apply h-full w-80;
     }
     &__elementos__conteiner{
-      @apply -mt-20 z-20 py-4;
+      
     }
     &__titulo{
       @apply z-20 px-2 ;
@@ -64,6 +58,10 @@
 .conteiner{
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 20px; /* Ajuste a quantidade de padding conforme necessário */
+  pointer-events: none;
   @apply  max-w-[1300px] h-full w-full m-auto py-16 px-4 relative flex flex-col items-center;
   &:hover .botaoLeft{
     @apply block;
@@ -73,8 +71,36 @@
   }
 }
 
+.conteinerFotos{
+  @apply flex flex-row relative w-[90vw];
+  scroll-snap-type: x mandatory;
+}
+
 .image{
-  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2;
+}
+.teste{
+  @apply -ml-72;
+  @media screen and (min-width: 470px) {
+    @apply -ml-60;
+  }
+  @media screen and (min-width: 500px) {
+    @apply -ml-52;
+  }
+  @media screen and (min-width: 670px) {
+    @apply -ml-36;
+  }
+  @media screen and (min-width: 700px) {
+    @apply -ml-20;
+  }
+  @media screen and (min-width: 800px) {
+    @apply -ml-10;
+  }
+  @media screen and (min-width: 1000px) {
+    @apply -ml-0;
+  }
 }
 
 // .botaoLeft{
@@ -82,6 +108,7 @@
 // }
 
 .botaoLeft{
+  pointer-events: all;
   @apply block absolute top-[40%] -translate-x-0 translate-y-[40%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
   @media screen and (min-width: $tablet) {
     @apply hidden;
@@ -90,6 +117,7 @@
 
 
 .botaoRight{
+  pointer-events: all;
   @apply block  absolute top-[40%] -translate-x-0 translate-y-[40%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
   @media screen and (min-width: $tablet) {
     @apply hidden;
