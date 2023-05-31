@@ -41,14 +41,14 @@
       @apply h-full w-80;
     }
     &__elementos__conteiner{
-      @apply rounded-b-lg py-1;
-      @media screen and (max-width: $tablet) {
         @apply hidden;
-      }
     }
     &__elementos__conteinerPrincipal{
       background-color: rgba(128, 128, 128, 0.5);
-      @apply rounded-b-lg py-1;
+      @apply rounded-t-lg py-1;
+      @media screen and (min-width: 800px) {
+        @apply hidden;
+      }
     }
     &__titulo{
       @apply z-20 px-2 ;
@@ -64,6 +64,38 @@
     }
   }
 }
+
+.projetos__links__conteiner{
+  background-color: rgba(128, 128, 128, 0.5);
+  @apply rounded-b-lg py-1;
+  @media screen and (min-width: 800px) {
+    @apply hidden;
+  }
+}
+
+.projetos__links__item{
+  @apply mx-2 cursor-pointer;
+}
+
+
+.principal:hover .projetos__links__conteiner{
+  @media screen and (min-width: 801px) {
+    @apply block;
+  }
+}
+
+.principal:hover .projetos__links__conteiner{
+  @media screen and (min-width: 801px) {
+    @apply block;
+  }
+}
+
+.principal:hover .projetos__item__elementos__conteinerPrincipal{
+  @media screen and (min-width: 801px) {
+    @apply block;
+  }
+}
+
 
 .conteiner{
   background-repeat: no-repeat;
@@ -161,7 +193,7 @@
 .principal{
   flex: 0 0 auto;
   scroll-snap-align: center;
-  @apply w-[300px] h-[270px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 border-verdeLoud;
+  @apply w-[300px] h-[270px] rounded-2xl bg-center bg-cover duration-500 flex flex-col justify-between border-2 border-verdeLoud ;
   @media screen and (min-width: 410px) {
     @apply w-[350px] h-[290px];
   }
@@ -172,7 +204,10 @@
     @apply w-[550px] h-[410px];
   }
   @media screen and (min-width: 850px) {
-    @apply w-[600px] h-[410px];
+    @apply border-white w-[600px] h-[410px];
+    &:hover{
+      @apply border-verdeLoud cursor-pointer;
+    }
   }
   @media screen and (min-width: 950px) {
     @apply w-[720px] h-[510px];
@@ -187,6 +222,8 @@
     @apply w-[510px] h-[410px];
   }
 }
+
+
 
 // .botaoLeft{
 //   @apply hidden  absolute top-[50%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer;
@@ -211,6 +248,9 @@
 .pontos{
   pointer-events: all;
   @apply flex top-4 justify-center py-2;
+  &__icons{
+    @apply text-verdeLoud;
+  }
   &__pontos{
     @apply text-2xl cursor-pointer;
   }

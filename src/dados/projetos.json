@@ -2,36 +2,50 @@
   {
     "url": "https://apiboficial.org/files/2022/04/photo5087269577225775648-1-1080x675.jpg",
     "titulo": "Projeto 1",
-    "skills": ["html", "css"]
+    "skills": ["html", "css"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "https://images.unsplash.com/photo-1682685795463-0674c065f315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1452&q=80",
     "titulo": "Projeto 2",
-    "skills": ["js", "css"]
+    "skills": ["js", "css"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "https://images.unsplash.com/photo-1685314627216-600b891897ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
     "titulo": "Projeto 3",
-    "skills": ["react", "js"]
+    "skills": ["react", "js"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "https://images.unsplash.com/photo-1683480677417-ca36ced387a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80",
     "titulo": "Projeto 4",
-    "skills": ["html", "css"]
+    "skills": ["html", "css"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "/images/modelo.png",
     "titulo": "Projeto 5",
-    "skills": ["js", "css"]
+    "skills": ["js", "css"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "/images/modelo2.png",
     "titulo": "Projeto 6",
-    "skills": ["html", "css"]
+    "skills": ["html", "css"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   },
   {
     "url": "/images/modelo3.png",
     "titulo": "Projeto 7",
-    "skills": ["react", "js"]
+    "skills": ["react", "js"],
+    "github": "https://github.com/vieiran55",
+    "site": "https://gabieantonio.vercel.app"
   }
 ]

@@ -7,6 +7,8 @@ import { RxDotFilled } from "react-icons/rx";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Tooltip } from "@mui/material";
+import { TbCircleNumber1, TbCircleNumber2, TbCircleNumber3, TbCircleNumber4, TbCircleNumber5, TbCircleNumber6, TbCircleNumber7 } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 export default function Projetos() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,7 +33,6 @@ export default function Projetos() {
   const getSlideIndex = (index: number, offset: number) => {
     const totalSlides = projetos.length;
     let slideIndex = index + offset;
-
     if (slideIndex < 0) {
       // Se o slideIndex for menor que zero, volta para o último slide
       slideIndex = totalSlides - 1;
@@ -52,10 +53,6 @@ export default function Projetos() {
       // Lidar com um único índice
       setCurrentIndex(slideIndex);
     }
-  };
-
-  const valuetext = (value: number) => {
-    return `${value + 1}`;
   };
 
   useEffect(() => {
@@ -96,8 +93,7 @@ export default function Projetos() {
         <div className={estilos.conteinerFotos}>
           <div
             style={{
-              backgroundImage: `url(${
-                projetos[getSlideIndex(currentIndex, -1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -144,11 +140,14 @@ export default function Projetos() {
                 ))}
               </div>
             </div>
+            <div className={estilos.projetos__links__conteiner}>
+              <Link to={projetos[currentIndex].github} className={estilos.projetos__links__item}>Github</Link>
+              <Link to={projetos[currentIndex].site} className={estilos.projetos__links__item}>Visite!</Link>
+            </div>
           </div>
           <div
             style={{
-              backgroundImage: `url(${
-                projetos[getSlideIndex(currentIndex, 1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -176,31 +175,50 @@ export default function Projetos() {
         <div className={estilos.botaoRight}>
           <BsChevronCompactRight onClick={nextSlide} />
         </div>
-        <Box sx={{ width: 300 }}>
-          <Slider
-            aria-label="Navegação"
-            defaultValue={currentIndex}
-            onChange={(_, value) => goToSlide(value)}
-            valueLabelDisplay="off" // Mostrar o valor ao passar o mouse
-            step={1}
-            value={currentIndex}
-            marks
-            min={0}
-            max={projetos.length - 1}
-            getAriaValueText={valuetext}
-            sx={{ color: "#70FF00" }}
-          />
-          <Tooltip title={`Value: ${currentIndex + 1}`} placement="top" arrow>
-            <div
-              onMouseOver={handleMouseOver}
-              onMouseLeave={handleMouseLeave}
-              style={{ display: "none" }}
-              tabIndex={-1}
-              aria-hidden="true"
-              data-value=""
-            />
-          </Tooltip>
-        </Box>
+        <div className={estilos.pontos}>
+          {projetos.map((slide, slideIndex) => {
+            let circleComponent = <RxDotFilled />; // Componente padrão
+
+            if (slideIndex + 1 === currentIndex + 1) {
+              // Verifica se é o índice correspondente ao currentIndex + 1
+              switch (slideIndex) {
+              case 0:
+                circleComponent = <TbCircleNumber1 className={estilos.pontos__icons}/>;
+                break;
+              case 1:
+                circleComponent = <TbCircleNumber2 className={estilos.pontos__icons}/>;
+                break; 
+              case 2:
+                circleComponent = <TbCircleNumber3 className={estilos.pontos__icons}/>;
+                break;
+              case 3:
+                circleComponent = <TbCircleNumber4 className={estilos.pontos__icons}/>;
+                break;
+              case 4:
+                circleComponent = <TbCircleNumber5 className={estilos.pontos__icons}/>;
+                break;
+              case 5:
+                circleComponent = <TbCircleNumber6 className={estilos.pontos__icons}/>;
+                break;
+              case 6:
+                circleComponent = <TbCircleNumber7 className={estilos.pontos__icons}/>;
+                break;
+              default:
+                break;
+              }
+            }
+
+            return (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className={estilos.pontos__pontos}
+              >
+                {circleComponent}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
