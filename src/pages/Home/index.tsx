@@ -1,3 +1,4 @@
+import Empresas from "../../componentes/Empresas";
 import Perfil from "../../componentes/Perfil";
 import Projetos from "../../componentes/Projetos";
 import Skills from "../../componentes/Skills";
@@ -12,6 +13,7 @@ export default function Home(){
       <Sobre />
       <Skills />
       <Projetos />
+      <Empresas />
     </div>
   );
 }

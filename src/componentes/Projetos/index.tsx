@@ -1,14 +1,25 @@
 import estilos from "./Projetos.module.scss";
 import projetos from "../../dados/projetos.json";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 import { RxDotFilled } from "react-icons/rx";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Tooltip } from "@mui/material";
-import { TbCircleNumber1, TbCircleNumber2, TbCircleNumber3, TbCircleNumber4, TbCircleNumber5, TbCircleNumber6, TbCircleNumber7 } from "react-icons/tb";
+import {
+  TbCircleNumber1,
+  TbCircleNumber2,
+  TbCircleNumber3,
+  TbCircleNumber4,
+  TbCircleNumber5,
+  TbCircleNumber6,
+  TbCircleNumber7,
+} from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
+import { TbHomeHand } from "react-icons/tb";
 
 export default function Projetos() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,31 +66,11 @@ export default function Projetos() {
     }
   };
 
-  useEffect(() => {
-    const images = document.querySelectorAll(".image");
-    images.forEach((image) => {
-      if (image.classList.contains("fade-out")) {
-        image.classList.remove("fade-out");
-      }
-      if (image.classList.contains("fade-in")) {
-        image.classList.remove("fade-in");
-      }
-      const dataIndex = image.getAttribute("data-index");
-      if (dataIndex === String(currentIndex)) {
-        image.classList.add("fade-in");
-      } else {
-        image.classList.add("fade-out");
-      }
-    });
-  }, [currentIndex]);
-
-  const handleMouseOver = (event: React.MouseEvent<HTMLSpanElement>) => {
-    const value = Number(event.currentTarget.getAttribute("aria-valuenow"));
-    event.currentTarget.setAttribute("aria-valuetext", `${value + 1}`);
-  };
-
-  const handleMouseLeave = (event: React.MouseEvent<HTMLSpanElement>) => {
-    event.currentTarget.removeAttribute("aria-valuetext");
+  const skillColors: { [key: string]: string } = {
+    html: estilos.html,
+    css: estilos.css,
+    js: estilos.js,
+    react: estilos.react,
   };
 
   return (
@@ -93,7 +84,8 @@ export default function Projetos() {
         <div className={estilos.conteinerFotos}>
           <div
             style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].url
+              backgroundImage: `url(${
+                projetos[getSlideIndex(currentIndex, -1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -133,7 +125,10 @@ export default function Projetos() {
                 {projetos[currentIndex].skills.map((skill, index) => (
                   <p
                     key={index}
-                    className={estilos.projetos__item__tag__iconPrincipal}
+                    className={classNames(
+                      estilos.projetos__item__tag__icon,
+                      skillColors[skill]
+                    )}
                   >
                     {skill}
                   </p>
@@ -141,13 +136,26 @@ export default function Projetos() {
               </div>
             </div>
             <div className={estilos.projetos__links__conteiner}>
-              <Link to={projetos[currentIndex].github} className={estilos.projetos__links__item}>Github</Link>
-              <Link to={projetos[currentIndex].site} className={estilos.projetos__links__item}>Visite!</Link>
+              <Link
+                to={projetos[currentIndex].site}
+                className={estilos.projetos__links__item}
+              >
+                <TbHomeHand className={estilos.projetos__links__item__icon} />{" "}
+                Visitar
+              </Link>
+              <Link
+                to={projetos[currentIndex].github}
+                className={estilos.projetos__links__item}
+              >
+                <BsGithub className={estilos.projetos__links__item__icon} />
+                Github
+              </Link>
             </div>
           </div>
           <div
             style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].url
+              backgroundImage: `url(${
+                projetos[getSlideIndex(currentIndex, 1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
@@ -170,38 +178,51 @@ export default function Projetos() {
           </div>
         </div>
         <div className={estilos.botaoLeft}>
-          <BsChevronCompactLeft onClick={prevSlide} />
+          <GrLinkPrevious onClick={prevSlide} />
         </div>
         <div className={estilos.botaoRight}>
-          <BsChevronCompactRight onClick={nextSlide} />
+          <GrLinkNext onClick={nextSlide} />
         </div>
         <div className={estilos.pontos}>
           {projetos.map((slide, slideIndex) => {
             let circleComponent = <RxDotFilled />; // Componente padrão
-
             if (slideIndex + 1 === currentIndex + 1) {
               // Verifica se é o índice correspondente ao currentIndex + 1
               switch (slideIndex) {
               case 0:
-                circleComponent = <TbCircleNumber1 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber1 className={estilos.pontos__icons} />
+                );
                 break;
               case 1:
-                circleComponent = <TbCircleNumber2 className={estilos.pontos__icons}/>;
-                break; 
+                circleComponent = (
+                  <TbCircleNumber2 className={estilos.pontos__icons} />
+                );
+                break;
               case 2:
-                circleComponent = <TbCircleNumber3 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber3 className={estilos.pontos__icons} />
+                );
                 break;
               case 3:
-                circleComponent = <TbCircleNumber4 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber4 className={estilos.pontos__icons} />
+                );
                 break;
               case 4:
-                circleComponent = <TbCircleNumber5 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber5 className={estilos.pontos__icons} />
+                );
                 break;
               case 5:
-                circleComponent = <TbCircleNumber6 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber6 className={estilos.pontos__icons} />
+                );
                 break;
               case 6:
-                circleComponent = <TbCircleNumber7 className={estilos.pontos__icons}/>;
+                circleComponent = (
+                  <TbCircleNumber7 className={estilos.pontos__icons} />
+                );
                 break;
               default:
                 break;
