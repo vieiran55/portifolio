@@ -1,56 +1,104 @@
 @import "../../../styles/variaveis";
 @import "../../../styles/breakpoints";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
-
 .empresasItens {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .linha__vertical {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background-color: white; /* Cor da linha vertical */
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .experiencia__list {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experiencia__item {
   display: flex;
-  align-items: flex-start;
-  margin: 2px;
-  width: 43%;
-  height: 40%;
-}
-
-.esquerda {
-  flex-direction: row-reverse;
-}
-
-.direita {
-  flex-direction: row;
-  margin-top: 9rem;
+  align-items: center;
+  margin: 20px;
+  position: relative;
 }
 
 .circulo {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red; /* Cor do círculo */
-  margin-right: 10px;
+  background-color: red;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .conteudo {
-  color: white; /* Cor do conteúdo (empresa, cargo, período) */
+  display: none;
+}
+
+.conteudo__vazio {
+  display: none;
+}
+
+.conteudo__esquerda {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.conteudo__direita {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.esquerda {
+  justify-content: flex-start;
+  width: 300px;
+
+  @media screen and (min-width: $tablet) {
+    width: 400px;
+  }
+}
+
+.direita {
+  justify-content: flex-end;
+  width: 300px;
+
+  @media screen and (min-width: $tablet) {
+    width: 400px;
+  }
+}
+
+.ativa .circulo {
+  background-color: blue;
+}
+
+.ativa .conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
+
+.esquerda .teste {
+  @apply flex flex-row
+}
+
+.direita .teste {
+  @apply flex flex-row-reverse
+}
+
+.conteudo__vazio {
+  @apply bg-white
 }
