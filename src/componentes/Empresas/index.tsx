@@ -7,22 +7,38 @@ export default function Empresas() {
     {
       empresa: "Empresa 1",
       cargo: "Cargo 1",
-      periodo: "Janeiro 2020 - Dezembro 2021",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
     },
     {
       empresa: "Empresa 2",
       cargo: "Cargo 2",
-      periodo: "Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020Fevereiro 2019 - Maio 2020Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020 Fevereiro 2019 - Maio 2020",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
     },
     {
       empresa: "Empresa 3",
       cargo: "Cargo 3",
-      periodo: "Fevereiro 2019 - Maio 2020",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
     },
     {
       empresa: "Empresa 4",
       cargo: "Cargo 4",
-      periodo: "Fevereiro 2019 - Maio 2020",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
+    },
+    {
+      empresa: "Empresa 5",
+      cargo: "Cargo 5",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
+    },
+    {
+      empresa: "Empresa 6",
+      cargo: "Cargo 6",
+      periodo: "Jan/20 - Dez/21",
+      descricao: "Dero 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021 Janeiro 2020 - Dezembro 2021"
     },
     // Adicione mais objetos de experiência, se necessário
   ];
