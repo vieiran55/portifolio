@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import estilos from "./Sobre.module.scss";
+import { useInView } from "react-intersection-observer";
 
 export default function Sobre() {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+
   return (
-    <div className={estilos.sobre}>
+    <div ref={ref} 
+      // className={estilos.sobre}
+      className={`${inView ? estilos.sobre2 : estilos.sobre}`}
+    >
       <div className={estilos.sobre__infos}>
         <div className={estilos.sobre__infos__titulos}>
           <h1 className={estilos.sobre__infos__titulo}>sobreMim</h1>

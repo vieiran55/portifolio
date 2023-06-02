@@ -20,10 +20,17 @@ import {
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 import { TbHomeHand } from "react-icons/tb";
+import { useInView } from "react-intersection-observer";
 
 export default function Projetos() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [animaFadeDown, setAnimaFadeDown] = useState(false);
+  const [animaFadeLeft, setAnimaFadeLeft] = useState(false);
+
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -33,11 +40,15 @@ export default function Projetos() {
 
   const nextSlide = () => {
     setIsLoading(true); // Ativar o indicador de carregamento
+    setAnimaFadeDown(true);
+    setAnimaFadeLeft(true);
     setTimeout(() => {
       const isLastSlide = currentIndex === projetos.length - 1;
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
       setIsLoading(false); // Desativar o indicador de carregamento
+      setAnimaFadeDown(false);
+      setAnimaFadeLeft(false);
     }, 200); // Tempo de espera para simular o carregamento da nova imagem
   };
 
@@ -74,7 +85,10 @@ export default function Projetos() {
   };
 
   return (
-    <div className={estilos.projetos}>
+    <div ref={ref}
+      // className={estilos.projetos}
+      className={`${inView ? estilos.projetos2 : estilos.projetos}`}
+    >
       <div className={estilos.projetos__titulos}>
         <h1 className={estilos.projetos__titulo}>projetos</h1>
         <h2 className={estilos.projetos__titulo2}>( )</h2>
@@ -113,14 +127,15 @@ export default function Projetos() {
               backgroundSize: "contain",
               backgroundPosition: "center",
             }}
-            className={(estilos.image, estilos.principal)}
+            className={classNames({
+              [estilos.image] : true,
+              [estilos.principal] : true,
+              [estilos.anima] : animaFadeDown
+            })}
           >
             <div
               className={estilos.projetos__item__elementos__conteinerPrincipal}
             >
-              <h1 className={estilos.projetos__item__titulo}>
-                {projetos[currentIndex].titulo}
-              </h1>
               <div className={estilos.projetos__item__tag}>
                 {projetos[currentIndex].skills.map((skill, index) => (
                   <p
@@ -134,6 +149,9 @@ export default function Projetos() {
                   </p>
                 ))}
               </div>
+              <h1 className={estilos.projetos__item__titulo}>
+                {projetos[currentIndex].titulo}
+              </h1>
             </div>
             <div className={estilos.projetos__links__conteiner}>
               <Link

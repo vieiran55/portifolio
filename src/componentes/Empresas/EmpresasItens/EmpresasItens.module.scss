@@ -2,7 +2,7 @@
 @import "../../../styles/breakpoints";
 
 .empresasItens {
-  @apply relative flex items-center justify-center h-full;
+  @apply relative flex items-center justify-center h-full my-7;
 }
 
 .linha__vertical {
@@ -37,7 +37,7 @@
 }
 
 .conteudo__esquerda {
-  @apply text-center mr-3;
+  @apply text-center mr-3 animate-pulse;
 }
 
 .conteudo__direita {
@@ -63,15 +63,19 @@
 }
 
 .estrela{
-  @apply h-5 w-5;
+  @apply h-5 w-5 animate-pingStop;
 }
 
 .ativa .conteudo {
-  @apply flex flex-col w-1/2 text-center ;
+  @apply flex flex-col w-1/2 text-center 
 }
 
 .esquerda .teste {
   @apply flex flex-row w-full;
+}
+
+.ativa .teste {
+  @apply animate-fadeinDown;
 }
 
 .direita .teste {
@@ -79,7 +83,7 @@
 }
 
 .esquerda .dentro{
-  @apply bg-purple-600 mr-4 p-4 rounded-lg text-white;
+  @apply bg-purple-600 mr-4 p-4 rounded-lg text-white ;
 }
 
 .esquerda .dentro::after{

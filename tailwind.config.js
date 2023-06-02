@@ -57,7 +57,7 @@ module.exports = {
           "0%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
-        "fade-in-down": {
+        fadeInDown: {
           "0%": {
             opacity: "0",
             transform: "translateY(-10px)",
@@ -67,13 +67,40 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        fadeInLeft: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-10px)", /* Modificado: translateX em vez de translateY */
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)", /* Modificado: translateX em vez de translateY */
+          },
+        },
+        fadeInUp: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)", /* Modificado: translateY em vez de translateX */
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)", /* Modificado: translateY em vez de translateX */
+          },
+        }              
       },
       animation: {
-        "waving-hand": "wave 10s linear infinite",
-        "loop-clock": "clock 10s linear infinite",
+        wavingHand: "wave 10s linear infinite",
+        loopClock: "clock 10s linear infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
         balanco: "wiggle 200ms ease-in-out",
-        fadeinDown: "fade-in-down 0.5s ease-out",
+        fadeinDown: "fadeInDown 1s ease-in-out",
+        fadeinDownSlow: "fadeInDown 3s ease-in-out",
+        fadeInLeft: "fadeInLeft 1s ease-in-out",
+        fadeInUp: "fadeInUp 1s ease-in-out",
+        spinSlow: "spin 3s linear",
+        pulseSlow: "pulse 1s ease-out",
+        bounceSlow: "bounce 0.5s ease-out",
+        pingStop: "ping 1s"
       },
     },
   },

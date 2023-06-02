@@ -1,6 +1,7 @@
 import React from "react";
 import EmpresasItens from "./EmpresasItens";
 import estilos from "./Empresas.module.scss";
+import { useInView } from "react-intersection-observer";
 
 export default function Empresas() {
   const experiencias = [
@@ -43,8 +44,15 @@ export default function Empresas() {
     // Adicione mais objetos de experiência, se necessário
   ];
 
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
-    <div className={estilos.empresas}>
+    <div ref={ref} 
+      // className={estilos.empresas}
+      className={`${inView ? estilos.empresas2 : estilos.empresas}`}
+    >
       <div className={estilos.empresas__titulos}>
         <h1 className={estilos.empresas__titulo}>experiências</h1>
         <h2 className={estilos.empresas__titulo2}>( )</h2>

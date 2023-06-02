@@ -5,11 +5,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .conteiner{
-  @apply w-11/12 mt-8;
+  @apply w-11/12 my-7;
+}
+.conteiner2{
+  @apply w-11/12 my-7 animate-fadeinDownSlow;
 }
 
 .skills{
-  @apply flex flex-row flex-wrap items-center justify-center;
+  @apply flex flex-row flex-wrap items-center justify-center my-7;
   @media screen and (min-width: $tablet) {
     @apply w-11/12;
   }

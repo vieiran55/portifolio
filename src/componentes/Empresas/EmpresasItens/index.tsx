@@ -21,6 +21,7 @@ export default function EmpresasItens({ experiencias }: Props) {
   // Função para alternar a ativação de uma experiência
   const toggleExperiencia = (index: number) => {
     setExperienciasAtivas((prevState) => {
+      console.log(prevState);
       // Se o índice já estiver ativo, remove-o da lista de ativos
       if (prevState.includes(index)) {
         return prevState.filter((i) => i !== index);

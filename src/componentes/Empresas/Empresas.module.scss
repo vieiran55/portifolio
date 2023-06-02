@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .empresas{
-  @apply flex flex-col w-11/12;
+  @apply flex flex-col w-11/12 my-7;
   &__titulos{
     @apply flex flex-row mb-2;
   }
@@ -56,4 +56,8 @@ h3 {
 p {
   font-size: 14px;
   margin-bottom: 2px;
+}
+
+.empresas2{
+  @apply flex flex-col w-11/12 my-7 animate-fadeinDownSlow;
 }

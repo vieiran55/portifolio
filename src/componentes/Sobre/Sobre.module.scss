@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .sobre{
-  @apply flex flex-col w-full items-center mt-7;
+  @apply flex flex-col w-full items-center my-7;
   @media screen and (min-width: $tablet) {
     @apply flex-row justify-around;
   }
@@ -67,4 +67,8 @@
       @apply text-2xl text-verdeLoud;
     }
   }
+}
+
+.sobre2{
+  @apply flex flex-col w-full items-center my-7 animate-fadeinDown;
 }

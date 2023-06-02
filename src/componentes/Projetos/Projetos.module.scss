@@ -16,7 +16,7 @@
 
 
 .projetos{
-  @apply flex flex-col w-11/12;
+  @apply flex flex-col w-11/12 my-7;
   &__titulos{
     @apply flex flex-row mb-2;
   }
@@ -44,8 +44,7 @@
         @apply hidden;
     }
     &__elementos__conteinerPrincipal{
-      background-color: rgba(128, 128, 128, 0.5);
-      @apply rounded-t-lg py-1;
+      @apply rounded-t-lg py-1 flex flex-col items-center animate-fadeinDown;
       @media screen and (min-width: 800px) {
         @apply hidden;
       }
@@ -57,7 +56,7 @@
       }
     }
     &__tag{
-      @apply flex flex-row text-center;
+      @apply flex flex-row text-center self-end;
       &__icon{
         @apply mx-2 w-12 h-7 border-2 rounded-md ;
       }
@@ -69,7 +68,7 @@
 }
 
 .projetos__links__conteiner{
-  @apply rounded-b-lg py-1 flex flex-row;
+  @apply rounded-b-lg py-1 flex flex-row animate-fadeInUp justify-end;
   @media screen and (min-width: 800px) {
     @apply hidden;
   }
@@ -123,7 +122,7 @@
 
 .conteinerFotos{
   scroll-snap-type: x mandatory;
-  @apply flex flex-row relative w-[90vw] items-center ;
+  @apply flex flex-row relative w-[90vw] items-center;
   @media screen and (min-width: 2000px) {
     @apply w-[375px] h-[350px] w-full;
   } 
@@ -132,7 +131,7 @@
 .image{
   flex: 0 0 auto;
   scroll-snap-align: center;
-  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1;
+  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1 animate-fadeinDown;
   @media screen and (min-width: 670px) {
     @apply h-[330px];
   }
@@ -146,6 +145,25 @@
     @apply w-[375px] h-[350px];
   } 
 }
+
+.imageLeft{
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1 animate-fadeInLeft;
+  @media screen and (min-width: 670px) {
+    @apply h-[330px];
+  }
+  @media screen and (min-width: 950px) {
+    @apply h-[430px];
+  }
+  @media screen and (min-width: 1050px) {
+    @apply w-[550px] h-[410px];
+  }
+  @media screen and (min-width: 2000px) {
+    @apply w-[375px] h-[350px];
+  } 
+}
+
 .primeiro{
   @apply -ml-72;
   @media screen and (min-width: 470px) {
@@ -255,7 +273,7 @@
   pointer-events: all;
   @apply flex top-4 justify-center py-2;
   &__icons{
-    @apply text-verdeLoud;
+    @apply text-verdeLoud animate-fadeInLeft;
   }
   &__pontos{
     @apply text-2xl cursor-pointer;
@@ -309,3 +327,23 @@
 
 
 
+.loading::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px
+}
+
+.anima{
+  @apply animate-pulse;
+}
+
+.projetos2{
+  @apply flex flex-col w-11/12 my-7 animate-fadeinDownSlow;
+}
