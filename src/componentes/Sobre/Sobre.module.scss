@@ -5,18 +5,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .sobre{
-  @apply flex flex-col w-full items-center mt-7;
+  @apply flex flex-col w-full items-center my-7;
   @media screen and (min-width: $tablet) {
-    @apply flex-row justify-around;
+    @apply justify-around;
   }
   @media screen and (min-width: $desktop_xl) {
     @apply mr-8;
   }
   &__infos{
     @apply w-11/12;
-    @media screen and (min-width: $tablet) {
-      @apply w-5/12;
-    }
     &__titulos{
       @apply flex flex-row mb-2;
     }
@@ -33,9 +30,12 @@
       }
     }
     &__texto{
-      @apply text-justify text-sm;
+      @apply text-justify text-sm my-2;
+      @media screen and (min-width: $tablet) {
+        @apply text-base;
+      }
       @media screen and (min-width: $desktop_xl) {
-        @apply text-xl;
+        @apply text-xl my-4;
       }
     }
   }
@@ -66,5 +66,15 @@
     &__simbol{
       @apply text-2xl text-verdeLoud;
     }
+  }
+}
+
+.sobre2{
+  @apply flex flex-col w-full items-center my-7 animate-fadeinDown;
+  @media screen and (min-width: $tablet) {
+    @apply justify-around;
+  }
+  @media screen and (min-width: $desktop_xl) {
+    @apply mr-8;
   }
 }

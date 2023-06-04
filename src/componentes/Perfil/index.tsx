@@ -1,9 +1,19 @@
 import estilos from "./Perfil.module.scss";
 import avatar from "../../images/logoPortifolio.png";
+import { useInView } from "react-intersection-observer";
 
 export default function Perfil(){
+
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return(
-    <div className={estilos.perfil}>
+    <div 
+      ref={ref}
+      // className={estilos.perfil}
+      className={`${inView ? estilos.perfil2 : estilos.perfil}`}
+    >
       <div className={estilos.perfil__conteiner__avatar}>
         <img className={estilos.perfil__avatar} src={avatar} alt="Minha caracteristicas fisicas" />
       </div>

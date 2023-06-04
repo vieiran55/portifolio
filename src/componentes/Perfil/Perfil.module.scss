@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .perfil{
-  @apply flex flex-col items-center justify-center w-full;
+  @apply flex flex-col items-center justify-center w-full my-7;
   @media screen and (min-width: $tablet) {
     @apply flex-row-reverse justify-evenly;
   }
@@ -53,5 +53,12 @@
         @apply text-4xl ;
       }
     }
+  }
+}
+
+.perfil2{
+  @apply flex flex-col items-center justify-center w-full my-7 animate-fadeinDown;
+  @media screen and (min-width: $tablet) {
+    @apply flex-row-reverse justify-evenly;
   }
 }
