@@ -22,6 +22,7 @@ import { BsGithub } from "react-icons/bs";
 import { TbHomeHand } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
 
+
 export default function Projetos() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -81,6 +82,11 @@ export default function Projetos() {
     css: estilos.css,
     js: estilos.js,
     react: estilos.react,
+    ts: estilos.ts,
+    sass: estilos.sass,
+    tailwind: estilos.tailwind,
+    node: estilos.node,
+    mongodb: estilos.mongodb,
   };
 
   return (
@@ -101,7 +107,7 @@ export default function Projetos() {
                 projetos[getSlideIndex(currentIndex, -1)].url
               })`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             className={classNames(estilos.image, estilos.primeiro)}
@@ -123,7 +129,7 @@ export default function Projetos() {
             style={{
               backgroundImage: `url(${projetos[currentIndex].url})`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             className={classNames({
@@ -144,7 +150,6 @@ export default function Projetos() {
                       skillColors[skill]
                     )}
                   >
-                    {skill}
                   </p>
                 ))}
               </div>
@@ -175,7 +180,7 @@ export default function Projetos() {
                 projetos[getSlideIndex(currentIndex, 1)].url
               })`,
               backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             className={estilos.image}

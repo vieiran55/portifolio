@@ -86,7 +86,19 @@ module.exports = {
             opacity: "1",
             transform: "translateY(0)", /* Modificado: translateY em vez de translateX */
           },
-        }              
+        },
+        flip: {
+          "0%": {
+            transform: "perspective(400px) rotateY(0)"
+          },
+          "100%": {
+            transform: "perspective(400px) rotateY(360deg)"
+          }
+        },
+        flipSlow: {
+          "0%, 100%": { transform: "rotateY(0)" },
+          "50%": { transform: "rotateY(180deg)" },
+        },
       },
       animation: {
         wavingHand: "wave 10s linear infinite",
@@ -98,11 +110,13 @@ module.exports = {
         fadeInLeft: "fadeInLeft 1s ease-in-out",
         fadeInUp: "fadeInUp 1s ease-in-out",
         spinSlow: "spin 3s linear infinite",
-        pulseSlow: "pulse 1s ease-out",
+        pulseSlow: "pulse 1s ease-in",
         bounceSlow: "bounce 0.5s ease-out",
-        pingStop: "ping 1s"
+        pingStop: "ping 1s",
+        flip: "flip 3s ease-in-out infinite",
+        flipSlow: "flipSlow 6s infinite",
       },
     },
   },
-  plugins:  [require("tw-elements/dist/plugin.cjs")],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 };

@@ -1,8 +1,8 @@
 [
   {
-    "url": "https://apiboficial.org/files/2022/04/photo5087269577225775648-1-1080x675.jpg",
-    "titulo": "Projeto 1",
-    "skills": ["html", "css"],
+    "url": "/images/casamentosite.png",
+    "titulo": "Casamento Gabriela e Antonio",
+    "skills": [ "react", "ts", "sass", "tailwind", "node", "mongodb"],
     "github": "https://github.com/vieiran55",
     "site": "https://gabieantonio.vercel.app"
   },

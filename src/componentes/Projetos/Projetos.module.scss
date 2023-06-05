@@ -52,7 +52,7 @@
     &__titulo{
       font-family: "Michroma", sans-serif;
       text-shadow: 4px 2px 6px #2B130C;
-      @apply z-20 px-2 text-base text-verdeLoud font-bold ;
+      @apply z-20 px-2 text-xs text-verdeLoud font-bold ;
       @media screen and (min-width: 800px) {
         @apply text-2xl py-2;
       }
@@ -60,10 +60,13 @@
     &__tag{
       @apply flex flex-row text-center self-end;
       &__icon{
-        @apply mx-2 w-12 h-7 border-2 rounded-md ;
+        @apply w-6 h-4  ;
+        @media screen and (min-width: 800px) {
+          @apply w-9 h-6;
+        }
       }
       &__iconPrincipal{
-        @apply mx-2 w-12 h-7 border-2 rounded-md ;
+        @apply mx-2 w-12 h-7  ;
       }
     }
   }
@@ -77,15 +80,15 @@
 }
 
 .projetos__links__item{
-  @apply mx-1 flex flex-row justify-center items-center border-2 rounded-md  h-8 w-24;
+  @apply mx-1 flex flex-row justify-center items-center border-2 rounded-md border-verdeLoud  h-8 w-24 text-verdeLoud bg-black;
   &:hover{
-    @apply border-2 border-verdeLoud rounded-md cursor-pointer w-24 text-verdeLoud bg-black;
+    @apply  border-2 border-verdeLoud rounded-md cursor-pointer w-24 text-verdeLoud bg-black transition delay-150 ease-in;
   }
   @media screen and (min-width: 800px) {
-    @apply justify-evenly h-10 w-24;
+    @apply justify-evenly h-10 w-24 bg-transparent;
   }
   &__icon{
-    @apply h-6 w-6 mr-1;
+    @apply h-6 w-6 mr-1 text-verdeLoud;
   }
 }
 
@@ -281,47 +284,58 @@
 }
 
 .react {
-  @apply border-metallicSeaweed text-metallicSeaweed; 
+  background-image: url("../../images/skills/react.svg");
+  @apply bg-no-repeat bg-contain bg-center animate-spinSlow; 
 }
 
 .js {
-  @apply border-yellow-700 text-yellow-700; 
+    background-image: url("../../images/skills/javascript.svg");
+  @apply bg-no-repeat bg-contain bg-center;
 }
 
 .ts {
-  @apply border-blue-700 text-blue-700;
-}
+    background-image: url("../../images/skills/typescript.svg");
+  @apply bg-no-repeat bg-contain bg-center;
+} 
 
 .html {
-  @apply border-orange-700 text-orange-700; 
+    background-image: url("../../images/skills/html5.svg");
+  @apply bg-no-repeat bg-contain bg-center;
 }
 
 .css {
-  @apply border-pink-200 text-pink-200; 
+    background-image: url("../../images/skills/css3.svg");
+  @apply bg-no-repeat bg-contain bg-center;
 }
 
 .node{
-  @apply  border-green-700 text-green-700; 
+    background-image: url("../../images/skills/nodejs.svg");
+  @apply bg-no-repeat bg-contain bg-center; 
 }
 
 .sass{
-  @apply border-pink-600 text-pink-600; 
+    background-image: url("../../images/skills/sass.svg");
+  @apply bg-no-repeat bg-contain bg-center;
 }
 
 .tailwind{
-  @apply border-cyan-600 text-cyan-600; 
+    background-image: url("../../images/skills/tailwindcss.svg");
+  @apply bg-no-repeat bg-contain bg-center; 
 }
 
 .mongodb{
-  @apply border-green-400 text-green-400; 
+    background-image: url("../../images/skills/mongodb.svg");
+  @apply bg-no-repeat bg-contain bg-center;  
 }
 
 .mysql{
-  @apply border-blue-900 text-blue-900; 
+    background-image: url("../../images/skills/mysql.svg");
+  @apply bg-no-repeat bg-contain bg-center animate-flip; 
 }
 
 .python{
-  @apply bg-gradient-to-r from-yellow-500 to-blue-500; 
+    background-image: url("../../images/skills/python.svg");
+  @apply bg-no-repeat bg-contain bg-center animate-flip;
 }
 
 .loading::before {
