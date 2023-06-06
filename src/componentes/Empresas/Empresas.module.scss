@@ -59,5 +59,12 @@ p {
 }
 
 .empresas2{
-  @apply flex flex-col w-11/12 my-7 animate-fadeinDownSlow;
+  @apply flex flex-col w-11/12 my-7 animate-fadeinDownSlow justify-center;
+}
+
+.empresas__conteiner{
+  @apply h-full;
+  @media screen and (min-width: $desktop_xl) {
+    @apply h-full;
+  }
 }

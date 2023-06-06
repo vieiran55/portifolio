@@ -1,6 +1,6 @@
 [
   {
-    "url": "/images/casamentosite.png",
+    "image": "/images/casamentosite.png",
     "hover": "/images/listadepresentes.png",
     "titulo": "Casamento Gabriela e Antonio",
     "skills": [ "react", "ts", "sass", "tailwind", "node", "mongodb"],
@@ -8,56 +8,64 @@
     "site": "https://gabieantonio.vercel.app"
   },
   {
-    "url": "/images/carrinho.png",
+    "image": "/images/carrinho.png",
+    "hover": "/images/carrinho2.png",
     "titulo": "Catarsy Shop",
     "skills": [ "react", "ts", "sass", "tailwind"],
     "github": "https://github.com/vieiran55/carrinho2",
     "site": "https://catarsyshop.vercel.app"
   },
   {
-    "url": "/images/loterias.png",
+    "image": "/images/loterias.png",
+    "hover": "/images/loterias2.png",
     "titulo": "Loterias",
     "skills": [ "react", "ts", "sass", "tailwind"],
     "github": "https://github.com/vieiran55/loteria",
     "site": "https://loteriacvtrsy.vercel.app"
   },
   {
-    "url": "/images/pokedex.png",
+    "image": "/images/pokedex.png",
+    "hover": "/images/pokedex2.png",
     "titulo": "Pokédex",
     "skills": [ "react", "ts", "sass", "tailwind"],
     "github": "https://github.com/vieiran55/pokedex",
     "site": "https://pokedexcvtrsy.vercel.app"
   },
   {
-    "url": "/images/previsao.png",
+    "image": "/images/previsao.png",
+    "hover": "/images/previsao2.png",
     "titulo": "Previsão do Tempo",
     "skills": [ "react", "ts", "sass", "css"],
     "github": "https://github.com/vieiran55/buscatempo",
     "site": "https://buscatempo.vercel.app"
   },
   {
-    "url": "/images/omnix.png",
+    "image": "/images/omnix.png",
+    "hover": "/images/omnix2.png",
     "titulo": "Desafio Omnix",
     "skills": [ "react", "ts", "sass", "css"],
     "github": "https://github.com/vieiran55/DesafioOmnix",
     "site": "https://desafioomnix.vercel.app"
   },
   {
-    "url": "/images/pokemongame.png",
+    "image": "/images/pokemongame.png",
+    "hover": "/images/pokemongame2.png",
     "titulo": "Pokémon Game",
     "skills": [ "react", "ts", "css"],
     "github": "https://github.com/vieiran55/pokemon-app",
     "site": "https://pokemoncvtrsy.vercel.app"
   },
   {
-    "url": "/images/fichas.png",
+    "image": "/images/fichas.png",
+    "hover": "/images/fichas2.png",
     "titulo": "Fichas de Treino",
     "skills": [ "js", "html", "css"],
     "github": "https://github.com/vieiran55/treinosv2",
     "site": "https://treinosv2.vercel.app"
   },
   {
-    "url": "/images/adopet.png",
+    "image": "/images/adopet.png",
+    "hover": "/images/adopet2.png",
     "titulo": "Adopet",
     "skills": [ "js", "html", "css"],
     "github": "https://github.com/vieiran55/adopet",

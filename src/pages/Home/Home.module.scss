@@ -1,19 +1,19 @@
 .home{
-  @apply max-w-[1600px] flex flex-col items-center justify-center;
+  @apply max-w-[1600px] flex flex-col items-center w-full;
   &__perfil{
-    @apply my-4;
+    @apply my-4 bg-black w-full;
   }
   &__sobre{
-    @apply my-4;
+    @apply my-4 bg-black w-full;
   }
   &__skills{
-    @apply my-4;
+    @apply my-4 bg-black w-full flex justify-center;
   }
   &__projetos{
-    @apply my-4;
+    @apply my-4 bg-black w-full;
   }
   &__empresas{
-    @apply my-4;  
+    @apply bg-black w-full flex justify-center;
   }
 }
 

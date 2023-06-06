@@ -92,18 +92,15 @@ export default function Projetos() {
   };
 
   const [hover, setHover] = useState(false);
-  const [animateFlip, setAnimateFlip] = useState(false);
 
   const handleMouseEnter = () => {
     setTimeout(() => {
       setHover(true);
-      setAnimateFlip(true);
     }, 2000);
   };
 
   const handleMouseLeave = () => {
     setHover(false);
-    setAnimateFlip(false);
   };
 
   return (
@@ -120,7 +117,7 @@ export default function Projetos() {
         <div className={estilos.conteinerFotos}>
           <div
             style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].image
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -143,16 +140,14 @@ export default function Projetos() {
           </div>
           <div
             style={{
-              backgroundImage: `url(${hover ? projetos[currentIndex].hover : projetos[currentIndex].url})`,
+              backgroundImage: `url(${hover ? projetos[currentIndex].hover : projetos[currentIndex].image})`,
               transition: "background-image 1s ease, transform 1s ease",
-              transform: animateFlip ? "rotateY(360deg)" : "rotateY(180)",
             }}
             className={classNames({
               [estilos.image]: true,
               [estilos.principal]: true,
               [estilos.anima]: animaFadeDown,
               "hover-image": hover,
-              "animate-flip": animateFlip,
             })}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -195,7 +190,7 @@ export default function Projetos() {
           </div>
           <div
             style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].image
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",

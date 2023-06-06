@@ -2,7 +2,7 @@
 @import "../../../styles/breakpoints";
 
 .empresasItens {
-  @apply relative flex items-center justify-center h-full my-7;
+  @apply relative flex  justify-center h-full my-7;
 }
 
 .linha__vertical {
@@ -14,7 +14,7 @@
 }
 
 .experiencia__item {
-  @apply flex items-center m-5 relative;
+  @apply flex items-center m-1 my-6 relative;
 }
 
 .circulo {
@@ -45,14 +45,14 @@
 }
 
 .esquerda {
-  @apply justify-start w-[300px];
+  @apply justify-start w-[330px];
   @media screen and (min-width: $tablet) {
     @apply w-full;
   }
 }
 
 .direita {
-  @apply justify-end w-[300px];
+  @apply justify-end w-[330px];
   @media screen and (min-width: $tablet) {
     @apply w-full;
   }

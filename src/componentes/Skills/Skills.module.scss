@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .conteiner{
-  @apply w-11/12 my-7;
+  @apply w-full my-7;
 }
 .conteiner2{
-  @apply w-11/12 my-7 animate-fadeinDownSlow;
+  @apply w-11/12 my-7 animate-fadeinDownSlow flex flex-row justify-center;
 }
 
 .skills{
@@ -28,6 +28,9 @@
       @apply h-20 w-20 ;
     }
   }
+  &__titulosConteiner{
+    @apply w-full;
+  }
   &__titulos{
     @apply flex flex-row mb-2;
   }
@@ -38,7 +41,7 @@
     }
   }
   &__titulo2{
-    @apply text-white text-lg mx-1;
+    @apply text-white text-lg mx-1 flex flex-row items-start;
     @media screen and (min-width: $desktop_xl) {
       @apply text-3xl;
     }

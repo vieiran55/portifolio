@@ -19,7 +19,7 @@ export default function Empresas() {
         <h1 className={estilos.empresas__titulo}>experiências</h1>
         <h2 className={estilos.empresas__titulo2}>( )</h2>
       </div>
-      <div>
+      <div className={estilos.empresas__conteiner}>
         <EmpresasItens experiencias={experiencias} />
       </div>
     </div>

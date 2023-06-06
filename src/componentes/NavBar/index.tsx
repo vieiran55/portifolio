@@ -13,7 +13,10 @@ import "tw-elements";
 import gitSmall from "../../images/githubSmall.png";
 import linkedinSmall from "../../images/linkedinSmall.png";
 import emailSmall from "../../images/emailSmall.png";
-import { Link } from "react-router-dom";
+import estilosProjetos from "../Projetos/Projetos.module.scss";
+import Empresas from "../Empresas";
+import Projetos from "../Projetos";
+import { Link } from "react-scroll";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -53,6 +56,7 @@ export default function NavBar() {
 
     prevOpen.current = open;
   }, [open]);
+
   return (
     <div className={estilos.navbar}>
       <div>
@@ -105,9 +109,71 @@ export default function NavBar() {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      <MenuItem onClick={handleClose}>Sobre</MenuItem>
-                      <MenuItem onClick={handleClose}>Skills</MenuItem>
-                      <MenuItem onClick={handleClose}>Projetos</MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <Link
+                          to="perfil"
+                          smooth={true}
+                          duration={500}
+                          offset={-70} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Perfil
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <Link
+                          to="sobre"
+                          smooth={true}
+                          duration={500}
+                          offset={-70} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Sobre
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <Link
+                          to="skills"
+                          smooth={true}
+                          duration={500}
+                          offset={-70} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Skills
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <Link
+                          to="projetos"
+                          smooth={true}
+                          duration={500}
+                          offset={-70} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Projetos
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <Link
+                          to="empresas"
+                          smooth={true}
+                          duration={1000}
+                          offset={-200} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Experiências
+                        </Link>
+                      </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
