@@ -113,7 +113,7 @@ module.exports = {
         pulseSlow: "pulse 1s ease-in",
         bounceSlow: "bounce 0.5s ease-out",
         pingStop: "ping 1s",
-        flip: "flip 3s ease-in-out infinite",
+        flip: "flip 1s ease-in-out infinite",
         flipSlow: "flipSlow 6s infinite",
       },
     },

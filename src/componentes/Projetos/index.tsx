@@ -16,6 +16,8 @@ import {
   TbCircleNumber5,
   TbCircleNumber6,
   TbCircleNumber7,
+  TbCircleNumber8,
+  TbCircleNumber9,
 } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
@@ -89,6 +91,21 @@ export default function Projetos() {
     mongodb: estilos.mongodb,
   };
 
+  const [hover, setHover] = useState(false);
+  const [animateFlip, setAnimateFlip] = useState(false);
+
+  const handleMouseEnter = () => {
+    setTimeout(() => {
+      setHover(true);
+      setAnimateFlip(true);
+    }, 2000);
+  };
+
+  const handleMouseLeave = () => {
+    setHover(false);
+    setAnimateFlip(false);
+  };
+
   return (
     <div ref={ref}
       // className={estilos.projetos}
@@ -103,8 +120,7 @@ export default function Projetos() {
         <div className={estilos.conteinerFotos}>
           <div
             style={{
-              backgroundImage: `url(${
-                projetos[getSlideIndex(currentIndex, -1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -127,16 +143,19 @@ export default function Projetos() {
           </div>
           <div
             style={{
-              backgroundImage: `url(${projetos[currentIndex].url})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundImage: `url(${hover ? projetos[currentIndex].hover : projetos[currentIndex].url})`,
+              transition: "background-image 1s ease, transform 1s ease",
+              transform: animateFlip ? "rotateY(360deg)" : "rotateY(180)",
             }}
             className={classNames({
-              [estilos.image] : true,
-              [estilos.principal] : true,
-              [estilos.anima] : animaFadeDown
+              [estilos.image]: true,
+              [estilos.principal]: true,
+              [estilos.anima]: animaFadeDown,
+              "hover-image": hover,
+              "animate-flip": animateFlip,
             })}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <div
               className={estilos.projetos__item__elementos__conteinerPrincipal}
@@ -176,8 +195,7 @@ export default function Projetos() {
           </div>
           <div
             style={{
-              backgroundImage: `url(${
-                projetos[getSlideIndex(currentIndex, 1)].url
+              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].url
               })`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -244,6 +262,16 @@ export default function Projetos() {
               case 6:
                 circleComponent = (
                   <TbCircleNumber7 className={estilos.pontos__icons} />
+                );
+                break;
+              case 7:
+                circleComponent = (
+                  <TbCircleNumber8 className={estilos.pontos__icons} />
+                );
+                break;
+              case 8:
+                circleComponent = (
+                  <TbCircleNumber9 className={estilos.pontos__icons} />
                 );
                 break;
               default:

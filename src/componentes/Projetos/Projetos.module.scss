@@ -54,7 +54,7 @@
       text-shadow: 4px 2px 6px #2B130C;
       @apply z-20 px-2 text-xs text-verdeLoud font-bold ;
       @media screen and (min-width: 800px) {
-        @apply text-2xl py-2;
+        @apply text-4xl py-2;
       }
     }
     &__tag{
@@ -168,6 +168,7 @@
     @apply w-[375px] h-[350px];
   } 
 }
+
 
 .primeiro{
   @apply -ml-72;
@@ -285,57 +286,87 @@
 
 .react {
   background-image: url("../../images/skills/react.svg");
-  @apply bg-no-repeat bg-contain bg-center animate-spinSlow; 
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center animate-spinSlow; 
 }
 
 .js {
     background-image: url("../../images/skills/javascript.svg");
-  @apply bg-no-repeat bg-contain bg-center;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }
 }
 
 .ts {
     background-image: url("../../images/skills/typescript.svg");
-  @apply bg-no-repeat bg-contain bg-center;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }
 } 
 
 .html {
     background-image: url("../../images/skills/html5.svg");
-  @apply bg-no-repeat bg-contain bg-center;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }
 }
 
 .css {
     background-image: url("../../images/skills/css3.svg");
-  @apply bg-no-repeat bg-contain bg-center;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }
 }
 
 .node{
     background-image: url("../../images/skills/nodejs.svg");
-  @apply bg-no-repeat bg-contain bg-center; 
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  } 
 }
 
 .sass{
     background-image: url("../../images/skills/sass.svg");
-  @apply bg-no-repeat bg-contain bg-center;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }
 }
 
 .tailwind{
     background-image: url("../../images/skills/tailwindcss.svg");
-  @apply bg-no-repeat bg-contain bg-center; 
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  } 
 }
 
 .mongodb{
     background-image: url("../../images/skills/mongodb.svg");
-  @apply bg-no-repeat bg-contain bg-center;  
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+    &:hover{
+    @apply animate-flip;
+  }  
 }
 
 .mysql{
     background-image: url("../../images/skills/mysql.svg");
-  @apply bg-no-repeat bg-contain bg-center animate-flip; 
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+  &:hover{
+    @apply animate-flip;
+  } 
 }
 
 .python{
     background-image: url("../../images/skills/python.svg");
-  @apply bg-no-repeat bg-contain bg-center animate-flip;
+  @apply bg-no-repeat cursor-pointer bg-contain bg-center;
+  &:hover{
+    @apply animate-flip;
+  }
 }
 
 .loading::before {
@@ -353,6 +384,10 @@
 
 .anima{
   @apply animate-pulse;
+}
+
+.image .principal .anima{
+  @apply animate-flip
 }
 
 .projetos2{
