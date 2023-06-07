@@ -45,9 +45,6 @@
     }
     &__elementos__conteinerPrincipal{
       @apply rounded-t-lg py-1 flex flex-col items-center animate-fadeinDown;
-      @media screen and (min-width: 800px) {
-        @apply hidden;
-      }
     }
     &__titulo{
       font-family: "Michroma", sans-serif;
@@ -59,12 +56,27 @@
     }
     &__tag{
       @apply flex flex-row text-center self-end;
+      @media screen and (min-width: 800px) {
+        @apply hidden;
+      }
       &__icon{
         @apply w-6 h-4  ;
         @media screen and (min-width: 800px) {
           @apply w-9 h-6;
         }
       }
+      &__iconPrincipal{
+        @apply mx-2 w-12 h-7  ;
+      }
+    }
+    &__tagDesktop{
+      @apply flex flex-row text-center self-end;
+      @media screen and (max-width: 800px) {
+        @apply hidden;
+      }
+      &__icon{
+          @apply w-9 h-6;
+        }
       &__iconPrincipal{
         @apply mx-2 w-12 h-7  ;
       }
@@ -79,13 +91,17 @@
   }
 }
 
+.projetos__links__itemConteiner{
+  @apply flex flex-row;
+}
+
 .projetos__links__item{
   @apply mx-1 flex flex-row justify-center items-center border-2 rounded-md border-verdeLoud  h-8 w-24 text-verdeLoud bg-black;
   &:hover{
-    @apply  border-2 border-verdeLoud rounded-md cursor-pointer w-24 text-verdeLoud bg-black transition delay-150 ease-in;
+    @apply border-2 border-verdeLoud rounded-md cursor-pointer w-24 text-verdeLoud bg-black transition delay-150 ease-in;
   }
   @media screen and (min-width: 800px) {
-    @apply justify-evenly h-10 w-24 bg-transparent;
+    @apply justify-evenly h-10 w-24;
   }
   &__icon{
     @apply h-6 w-6 mr-1 text-verdeLoud;
@@ -95,13 +111,7 @@
 
 .principal:hover .projetos__links__conteiner{
   @media screen and (min-width: 801px) {
-    @apply flex flex-row justify-end;
-  }
-}
-
-.principal:hover .projetos__item__elementos__conteinerPrincipal{
-  @media screen and (min-width: 801px) {
-    @apply flex flex-col items-center;
+    @apply flex flex-row justify-between;
   }
 }
 
@@ -267,7 +277,7 @@
 
 .botaoRight{
   pointer-events: all;
-  @apply block bg-verdeLoud/70 absolute top-[40%] -translate-x-0 translate-y-[40%] right-5 text-2xl rounded-full p-2 text-black cursor-pointer;
+  @apply block bg-verdeLoud/70 absolute top-[40%] -translate-x-0 translate-y-[40%] right-2 text-2xl rounded-full p-2 text-black cursor-pointer;
   @media screen and (min-width: $tablet) {
     @apply hidden;
   }
@@ -393,4 +403,40 @@
     max-width: 1600px;
     margin: 0 auto;
   }
+}
+
+.imageLateral{
+  @apply h-full rounded-xl;
+}
+
+.imagePrincipal{
+  @apply h-full rounded-xl;
+}
+
+.imagePrincipal2{
+  @apply h-full rounded-xl;
+}
+
+.imagePrincipal,
+.imagePrincipal2 {
+  transition: opacity 1s ease;
+  opacity: 1;
+  @apply animate-fadeInDownFull;
+}
+
+.imagePrincipal2 {
+  display: none;
+  opacity: 0;
+}
+
+.imageContainer:hover .imagePrincipal {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.imageContainer:hover .imagePrincipal2 {
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease; 
 }

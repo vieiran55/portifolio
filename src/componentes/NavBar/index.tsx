@@ -133,7 +133,7 @@ export default function NavBar() {
                           className={estilos.navbarLink}
                           onClick={handleClose}
                         >
-                          ScrollLink
+                          Sobre
                         </ScrollLink>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>

@@ -24,7 +24,6 @@ import { BsGithub } from "react-icons/bs";
 import { TbHomeHand } from "react-icons/tb";
 import { useInView } from "react-intersection-observer";
 
-
 export default function Projetos() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -42,8 +41,8 @@ export default function Projetos() {
   };
 
   const nextSlide = () => {
-    setAnimaFadeDown(true);
     setAnimaFadeLeft(true);
+    setAnimaFadeDown(true);
     setTimeout(() => {
       const isLastSlide = currentIndex === projetos.length - 1;
       const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -51,7 +50,7 @@ export default function Projetos() {
       setIsLoading(false); // Desativar o indicador de carregamento
       setAnimaFadeDown(false);
       setAnimaFadeLeft(false);
-    }, 200); // Tempo de espera para simular o carregamento da nova imagem
+    }, 500); // Tempo de espera para simular o carregamento da nova imagem
   };
 
   const getSlideIndex = (index: number, offset: number) => {
@@ -91,20 +90,9 @@ export default function Projetos() {
     mongodb: estilos.mongodb,
   };
 
-  const [hover, setHover] = useState(false);
-
-  const handleMouseEnter = () => {
-    setTimeout(() => {
-      setHover(true);
-    }, 2000);
-  };
-
-  const handleMouseLeave = () => {
-    setHover(false);
-  };
-
   return (
-    <div ref={ref}
+    <div
+      ref={ref}
       // className={estilos.projetos}
       className={`${inView ? estilos.projetos2 : estilos.projetos}`}
     >
@@ -116,15 +104,16 @@ export default function Projetos() {
       <div className={estilos.conteiner}>
         <div className={estilos.conteinerFotos}>
           <div
-            style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, -1)].image
-              })`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className={classNames(estilos.image, estilos.primeiro)}
+            className={classNames({
+              [estilos.image]: true,
+              [estilos.primeiro]: true,
+              [estilos.anima2]: animaFadeDown,
+            })}
           >
+            <img
+              src={projetos[getSlideIndex(currentIndex, -1)].image}
+              className={estilos.imageLateral}
+            ></img>
             <div className={estilos.projetos__item__elementos__conteiner}>
               <h1 className={estilos.projetos__item__titulo}>
                 {projetos[getSlideIndex(currentIndex, -1)].titulo}
@@ -139,20 +128,25 @@ export default function Projetos() {
             </div>
           </div>
           <div
-            style={{
-              backgroundImage: `url(${hover ? projetos[currentIndex].hover : projetos[currentIndex].image})`,
-              transition: "background-image 1s ease, transform 1s ease",
-            }}
+            style={{ position: "relative" }}
             className={classNames({
               [estilos.image]: true,
               [estilos.principal]: true,
               [estilos.anima]: animaFadeDown,
+              [estilos.imageContainer]: true,
             })}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
+            <img
+              src={projetos[currentIndex].image}
+              className={estilos.imagePrincipal}
+            ></img>
+            <img
+              src={projetos[currentIndex].hover}
+              className={estilos.imagePrincipal2}
+            ></img>
             <div
               className={estilos.projetos__item__elementos__conteinerPrincipal}
+              style={{ position: "absolute", zIndex: 1, width: "100%" }}
             >
               <div className={estilos.projetos__item__tag}>
                 {projetos[currentIndex].skills.map((skill, index) => (
@@ -162,41 +156,61 @@ export default function Projetos() {
                       estilos.projetos__item__tag__icon,
                       skillColors[skill]
                     )}
-                  >
-                  </p>
+                  ></p>
                 ))}
               </div>
               <h1 className={estilos.projetos__item__titulo}>
                 {projetos[currentIndex].titulo}
               </h1>
             </div>
-            <div className={estilos.projetos__links__conteiner}>
-              <Link
-                to={projetos[currentIndex].site}
-                className={estilos.projetos__links__item}
-              >
-                <TbHomeHand className={estilos.projetos__links__item__icon} />{" "}
-                Visitar
-              </Link>
-              <Link
-                to={projetos[currentIndex].github}
-                className={estilos.projetos__links__item}
-              >
-                <BsGithub className={estilos.projetos__links__item__icon} />
-                Github
-              </Link>
+            <div
+              className={estilos.projetos__links__conteiner}
+              style={{
+                position: "absolute",
+                zIndex: 1,
+                width: "100%",
+                bottom: 0,
+              }}
+            >
+              <div className={estilos.projetos__item__tagDesktop}>
+                {projetos[currentIndex].skills.map((skill, index) => (
+                  <p
+                    key={index}
+                    className={classNames(
+                      estilos.projetos__item__tag__icon,
+                      skillColors[skill]
+                    )}
+                  ></p>
+                ))}
+              </div>
+              <div className={estilos.projetos__links__itemConteiner}>
+                <Link
+                  to={projetos[currentIndex].site}
+                  className={estilos.projetos__links__item}
+                >
+                  <TbHomeHand className={estilos.projetos__links__item__icon} />{" "}
+                  Visitar
+                </Link>
+                <Link
+                  to={projetos[currentIndex].github}
+                  className={estilos.projetos__links__item}
+                >
+                  <BsGithub className={estilos.projetos__links__item__icon} />
+                  Github
+                </Link>
+              </div>
             </div>
           </div>
           <div
-            style={{
-              backgroundImage: `url(${projetos[getSlideIndex(currentIndex, 1)].image
-              })`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className={estilos.image}
+            className={classNames({
+              [estilos.image]: true,
+              [estilos.anima2]: animaFadeDown,
+            })}
           >
+            <img
+              src={projetos[getSlideIndex(currentIndex, 1)].image}
+              className={estilos.imageLateral}
+            ></img>
             <div className={estilos.projetos__item__elementos__conteiner}>
               <h1 className={estilos.projetos__item__titulo}>
                 {projetos[getSlideIndex(currentIndex, 1)].titulo}

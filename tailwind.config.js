@@ -67,6 +67,16 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        fadeInDownFull: {
+          "0%": {
+            opacity: "0.5",
+            transform: "translateY(0)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
         fadeInLeft: {
           "0%": {
             opacity: "0",
@@ -96,8 +106,8 @@ module.exports = {
           }
         },
         flipSlow: {
-          "0%, 100%": { transform: "rotateY(0)" },
-          "50%": { transform: "rotateY(180deg)" },
+          "0%, 100%": { transform: "rotateY(180deg)" },
+          "100%": { transform: "rotateY(0)" },
         },
       },
       animation: {
@@ -106,6 +116,7 @@ module.exports = {
         wiggle: "wiggle 1s ease-in-out infinite",
         balanco: "wiggle 200ms ease-in-out",
         fadeinDown: "fadeInDown 1s ease-in-out",
+        fadeInDownFull: "fadeInDownFull 1s ease-in-out",
         fadeinDownSlow: "fadeInDown 3s ease-in-out",
         fadeInLeft: "fadeInLeft 1s ease-in-out",
         fadeInUp: "fadeInUp 1s ease-in-out",
@@ -114,7 +125,7 @@ module.exports = {
         bounceSlow: "bounce 0.5s ease-out",
         pingStop: "ping 1s",
         flip: "flip 1s ease-in-out infinite",
-        flipSlow: "flipSlow 6s infinite",
+        flipSlow: "flipSlow 2s",
       },
     },
   },
