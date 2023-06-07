@@ -45,14 +45,14 @@
 }
 
 .esquerda {
-  @apply justify-start w-[330px];
+  @apply w-[330px] justify-start;
   @media screen and (min-width: $tablet) {
     @apply w-full;
   }
 }
 
 .direita {
-  @apply justify-end w-[330px];
+  @apply  w-[330px] justify-end;
   @media screen and (min-width: $tablet) {
     @apply w-full;
   }
@@ -97,7 +97,7 @@
   bottom: -20px;
   top: 50%;
   right: 50%;
-  @apply rotate-[270deg];
+  @apply rotate-[270deg] w-0;
 }
 
 .direita .dentro{

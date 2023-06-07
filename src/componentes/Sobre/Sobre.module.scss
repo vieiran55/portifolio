@@ -61,7 +61,7 @@
       @apply text-xs my-4 font-bold;
     }
     &__link{
-      @apply text-xs mx-2 text-verdeLoud underline decoration-1;
+      @apply text-xs mx-2 text-verdeLoud underline decoration-1 cursor-pointer;
     }
     &__simbol{
       @apply text-2xl text-verdeLoud;

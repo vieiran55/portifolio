@@ -16,7 +16,8 @@ import emailSmall from "../../images/emailSmall.png";
 import estilosProjetos from "../Projetos/Projetos.module.scss";
 import Empresas from "../Empresas";
 import Projetos from "../Projetos";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -111,7 +112,7 @@ export default function NavBar() {
                     >
                       <MenuItem onClick={handleClose}>
                         {" "}
-                        <Link
+                        <ScrollLink
                           to="perfil"
                           smooth={true}
                           duration={500}
@@ -120,11 +121,11 @@ export default function NavBar() {
                           onClick={handleClose}
                         >
                           Perfil
-                        </Link>
+                        </ScrollLink>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
-                        <Link
+                        <ScrollLink
                           to="sobre"
                           smooth={true}
                           duration={500}
@@ -132,12 +133,12 @@ export default function NavBar() {
                           className={estilos.navbarLink}
                           onClick={handleClose}
                         >
-                          Sobre
-                        </Link>
+                          ScrollLink
+                        </ScrollLink>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
-                        <Link
+                        <ScrollLink
                           to="skills"
                           smooth={true}
                           duration={500}
@@ -146,11 +147,11 @@ export default function NavBar() {
                           onClick={handleClose}
                         >
                           Skills
-                        </Link>
+                        </ScrollLink>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
-                        <Link
+                        <ScrollLink
                           to="projetos"
                           smooth={true}
                           duration={500}
@@ -159,11 +160,11 @@ export default function NavBar() {
                           onClick={handleClose}
                         >
                           Projetos
-                        </Link>
+                        </ScrollLink>
                       </MenuItem>
                       <MenuItem onClick={handleClose}>
                         {" "}
-                        <Link
+                        <ScrollLink
                           to="empresas"
                           smooth={true}
                           duration={1000}
@@ -172,7 +173,7 @@ export default function NavBar() {
                           onClick={handleClose}
                         >
                           Experiências
-                        </Link>
+                        </ScrollLink>
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
@@ -182,7 +183,7 @@ export default function NavBar() {
           </Popper>
         </Stack>
         <ol className={estilos.mobile__sociais}>
-          <Link to={"teste"} className={estilos.mobile__links}>
+          <Link to={"https://www.linkedin.com/in/antoniov55/"} className={estilos.mobile__links}>
             <img
               src={linkedinSmall}
               className={estilos.mobile__links__icons}
@@ -190,7 +191,7 @@ export default function NavBar() {
             />{" "}
             Linkedin
           </Link>
-          <Link to={"teste"} className={estilos.mobile__links}>
+          <Link to={"https://github.com/vieiran55"} className={estilos.mobile__links}>
             <img
               src={gitSmall}
               className={estilos.mobile__links__icons}
@@ -198,7 +199,7 @@ export default function NavBar() {
             />
             Github
           </Link>
-          <Link to={"teste"} className={estilos.mobile__links}>
+          <Link to={"https://linktr.ee/vieiran55"} className={estilos.mobile__links}>
             <img
               src={emailSmall}
               className={estilos.mobile__links__icons}
@@ -221,12 +222,57 @@ export default function NavBar() {
           </h1>
         </div>
         <ol className={estilos.conteinerDesktop__opcoes}>
-          <li className={estilos.conteinerDesktop__opcoes__links}>Sobre</li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>Skills</li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>Projetos</li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+            <ScrollLink
+              to="perfil"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+            Perfil
+            </ScrollLink>
+          </li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+            <ScrollLink
+              to="sobre"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+            Sobre
+            </ScrollLink>
+          </li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+            <ScrollLink
+              to="skills"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+            Skills
+            </ScrollLink>
+          </li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>                        <ScrollLink
+            to="projetos"
+            smooth={true}
+            duration={1000}
+            offset={-200} // Ajuste o valor do deslocamento conforme necessário
+          >
+            Projetos
+          </ScrollLink>
+          </li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>                        <ScrollLink
+            to="empresas"
+            smooth={true}
+            duration={1000}
+            offset={-200} // Ajuste o valor do deslocamento conforme necessário
+          >
+            Experiências
+          </ScrollLink>
+          </li>
         </ol>
         <ol className={estilos.conteinerDesktop__sociais}>
-          <Link to={"teste"} className={estilos.mobile__links}>
+          <Link to={"https://www.linkedin.com/in/antoniov55/"} className={estilos.mobile__links}>
             <img
               src={linkedinSmall}
               className={estilos.mobile__links__icons}
@@ -234,7 +280,7 @@ export default function NavBar() {
             />{" "}
             Linkedin
           </Link>
-          <Link to={"teste"} className={estilos.mobile__links}>
+          <Link to={"https://github.com/vieiran55"} className={estilos.mobile__links}>
             <img
               src={gitSmall}
               className={estilos.mobile__links__icons}
@@ -242,7 +288,7 @@ export default function NavBar() {
             />
             Github
           </Link>
-          <Link to={"teste"} className={estilos.mobile__linksEmail}>
+          <Link to={"https://linktr.ee/vieiran55"} className={estilos.mobile__linksEmail}>
             <img
               src={emailSmall}
               className={estilos.mobile__links__icons}

@@ -138,16 +138,16 @@
   scroll-snap-align: center;
   @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1 animate-fadeinDown;
   @media screen and (min-width: 670px) {
-    @apply h-[330px];
+    @apply h-[330px] flex;
   }
   @media screen and (min-width: 950px) {
-    @apply h-[430px];
+    @apply h-[430px] flex;
   }
   @media screen and (min-width: 1050px) {
-    @apply w-[550px] h-[410px];
+    @apply w-[550px] h-[410px] flex;
   }
   @media screen and (min-width: 2000px) {
-    @apply w-[375px] h-[350px];
+    @apply w-[375px] h-[350px] flex;
   } 
 }
 
@@ -156,16 +156,16 @@
   scroll-snap-align: center;
   @apply w-[300px] h-[250px] rounded-2xl bg-center bg-cover duration-500 flex flex-col-reverse border-2 mx-1 animate-fadeInLeft;
   @media screen and (min-width: 670px) {
-    @apply h-[330px];
+    @apply h-[330px] flex;
   }
   @media screen and (min-width: 950px) {
-    @apply h-[430px];
+    @apply h-[430px] flex;
   }
   @media screen and (min-width: 1050px) {
-    @apply w-[550px] h-[410px];
+    @apply w-[550px] h-[410px] flex;
   }
   @media screen and (min-width: 2000px) {
-    @apply w-[375px] h-[350px];
+    @apply w-[375px] h-[350px] flex;
   } 
 }
 
@@ -191,31 +191,31 @@
     @apply -ml-60;
   }
   @media screen and (min-width: 1050px) {
-    @apply -ml-[30rem];
+    @apply -ml-[30rem] bg-black;
   }
   @media screen and (min-width: 1200px) {
     @apply -ml-96;
   }
   @media screen and (min-width: 1300px) {
-    @apply -ml-[23rem];
+    @apply -ml-[23rem] bg-black;
   }
   @media screen and (min-width: 1400px) {
-    @apply -ml-[20rem];
+    @apply -ml-[20rem] bg-black;
   }
   @media screen and (min-width: 1600px) {
-    @apply -ml-[15rem];
+    @apply -ml-[15rem] bg-black;
   }
   @media screen and (min-width: 1700px) {
-    @apply -ml-[13rem];
+    @apply -ml-[13rem] bg-black;
   }
   @media screen and (min-width: 1800px) {
-    @apply -ml-[9rem];
+    @apply -ml-[9rem] bg-black;
   }
   @media screen and (min-width: 1900px) {
-    @apply -ml-[6rem];
+    @apply -ml-[6rem] bg-black;
   }
   @media screen and (min-width: 2000px) {
-    @apply -ml-[0];
+    @apply -ml-[0] bg-black;
   }
 }
 
@@ -225,31 +225,31 @@
   @apply w-[300px] h-[270px] rounded-2xl bg-center bg-cover duration-500 flex flex-col justify-between border-2 border-verdeLoud ;
   @apply transition-all;
   @media screen and (min-width: 410px) {
-    @apply w-[350px] h-[290px];
+    @apply w-[350px] h-[290px] justify-between;
   }
   @media screen and (min-width: 670px) {
-    @apply w-[470px] h-[380px];
+    @apply w-[470px] h-[380px] justify-between;
   }
   @media screen and (min-width: 700px) {
-    @apply w-[550px] h-[410px];
+    @apply w-[550px] h-[410px] justify-between;
   }
   @media screen and (min-width: 850px) {
-    @apply border-white w-[600px] h-[410px];
+    @apply border-white w-[600px] h-[410px] justify-between;
     &:hover{
-      @apply border-verdeLoud;
+      @apply border-verdeLoud justify-between;
     }
   }
   @media screen and (min-width: 950px) {
-    @apply w-[720px] h-[510px];
+    @apply w-[720px] h-[510px] justify-between;
   }
   @media screen and (min-width: 1050px) {
-    @apply w-[800px] h-[550px];
+    @apply w-[800px] h-[550px] justify-between;
   }
   @media screen and (min-width: 1600px) {
-    @apply w-[840px] h-[600px];
+    @apply w-[840px] h-[600px] justify-between;
   }
   @media screen and (min-width: 2000px) {
-    @apply w-[510px] h-[410px];
+    @apply w-[510px] h-[410px] justify-between;
   }
 }
 

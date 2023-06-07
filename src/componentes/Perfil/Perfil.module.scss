@@ -41,10 +41,10 @@
     &__nome{
       @apply text-4xl py-1 text-verdeLoud font-bold;
       @media screen and (min-width: $tablet) {
-        @apply text-[3rem];
+        @apply text-[3rem] text-verdeLoud;
       }
       @media screen and (min-width: $desktop_xl) {
-        @apply text-[5rem];
+        @apply text-[5rem] text-verdeLoud;
       }
     }
     &__prof{

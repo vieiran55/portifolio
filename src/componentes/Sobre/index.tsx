@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import estilos from "./Sobre.module.scss";
 import { useInView } from "react-intersection-observer";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Sobre() {
   const [ref, inView] = useInView({
@@ -51,9 +52,9 @@ export default function Sobre() {
             <h1 className={estilos.sobre__cards__titulo}>
               Desenvolvedor Fullstack Jr.
             </h1>
-            <Link to={"/"} className={estilos.sobre__cards__link}>
-              Projects
-            </Link>
+            <ScrollLink to={"projetos"} className={estilos.sobre__cards__link}>
+              Projetos
+            </ScrollLink>
           </div>
           <h1 className={estilos.sobre__cards__simbol}>{"</>"}</h1>
         </div>
@@ -62,7 +63,7 @@ export default function Sobre() {
             <h1 className={estilos.sobre__cards__titulo}>
               Freelancer
             </h1>
-            <Link to={"/"} className={estilos.sobre__cards__link}>
+            <Link to={"https://linktr.ee/vieiran55"} className={estilos.sobre__cards__link}>
               Entre em contato comigo!
             </Link>
           </div>

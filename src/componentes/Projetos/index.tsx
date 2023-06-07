@@ -147,7 +147,6 @@ export default function Projetos() {
               [estilos.image]: true,
               [estilos.principal]: true,
               [estilos.anima]: animaFadeDown,
-              "hover-image": hover,
             })}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
