@@ -8,6 +8,8 @@ export default function Sobre() {
     threshold: 0,
   });
 
+  const wpp = "https://wa.me/5561999981928";
+
 
   return (
     <div ref={ref}
@@ -63,7 +65,7 @@ export default function Sobre() {
             <h1 className={estilos.sobre__cards__titulo}>
               Freelancer
             </h1>
-            <Link to={"https://linktr.ee/vieiran55"} className={estilos.sobre__cards__link}>
+            <Link to={wpp} className={estilos.sobre__cards__link}>
               Entre em contato comigo!
             </Link>
           </div>

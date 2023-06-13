@@ -35,9 +35,16 @@ export default function Projetos() {
   });
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? projetos.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    setAnimaFadeLeft(true);
+    setAnimaFadeDown(true);
+    setTimeout(() => {
+      const isFirstSlide = currentIndex === 0;
+      const newIndex = isFirstSlide ? projetos.length - 1 : currentIndex - 1;
+      setCurrentIndex(newIndex);
+      setIsLoading(false); // Desativar o indicador de carregamento
+      setAnimaFadeDown(false);
+      setAnimaFadeLeft(false);
+    }, 500); // Tempo de espera para simular o carregamento da nova imagem
   };
 
   const nextSlide = () => {

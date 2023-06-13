@@ -18,7 +18,7 @@
 }
 
 .circulo {
-  @apply w-[20px] h-[20px] rounded-full bg-verdeLoud cursor-pointer transition duration-300 absolute left-1/2 translate-x-[-50%] z-10;
+  @apply w-[20px] h-[20px] rounded-full bg-verdeLoud cursor-pointer transition duration-300 absolute left-1/2 translate-x-[-50%] z-10 flex flex-col items-center justify-end;
 }
 
 .conteudo {
@@ -60,6 +60,10 @@
 
 .ativa .circulo {
   @apply text-black ;
+}
+
+.notification{
+  @apply h-4 w-4 animate-bounce text-black;
 }
 
 .estrela{

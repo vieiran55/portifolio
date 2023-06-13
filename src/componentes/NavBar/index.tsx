@@ -48,6 +48,8 @@ export default function NavBar() {
     }
   }
 
+  const wpp = "https://wa.me/5561999981928";
+
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = useRef(open);
   useEffect(() => {
@@ -199,7 +201,7 @@ export default function NavBar() {
             />
             Github
           </Link>
-          <Link to={"https://linktr.ee/vieiran55"} className={estilos.mobile__links}>
+          <Link to={wpp} className={estilos.mobile__links}>
             <img
               src={emailSmall}
               className={estilos.mobile__links__icons}
@@ -288,7 +290,7 @@ export default function NavBar() {
             />
             Github
           </Link>
-          <Link to={"https://linktr.ee/vieiran55"} className={estilos.mobile__linksEmail}>
+          <Link to={wpp} className={estilos.mobile__linksEmail}>
             <img
               src={emailSmall}
               className={estilos.mobile__links__icons}

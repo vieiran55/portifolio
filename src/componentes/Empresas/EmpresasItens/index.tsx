@@ -4,6 +4,7 @@ import estilos from "./EmpresasItens.module.scss";
 import { MdStarBorderPurple500 } from "react-icons/md";
 import { DiReact } from "react-icons/di";
 import { GiNinjaStar } from "react-icons/gi";
+import { TfiHandPointDown } from "react-icons/tfi";
 
 interface Experiencia {
   empresa: string;
@@ -56,6 +57,9 @@ export default function EmpresasItens({ experiencias }: Props) {
               onClick={() => toggleExperiencia(index)}
             >
               {/* Renderiza o ícone apenas se a experiência estiver ativa */}
+              {!experienciasAtivas.includes(index) && (
+                <TfiHandPointDown size={20} className={estilos.notification} />
+              )}
               {experienciasAtivas.includes(index) && (
                 <GiNinjaStar size={20} className={estilos.estrela} />
               )}
