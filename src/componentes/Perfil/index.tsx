@@ -1,5 +1,5 @@
 import estilos from "./Perfil.module.scss";
-import avatar from "../../images/logoPortifolio.png";
+import avatar from "../../images/antonio.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Perfil(){

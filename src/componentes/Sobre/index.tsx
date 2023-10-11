@@ -26,7 +26,7 @@ export default function Sobre() {
             Olá, sou Antonio, um desenvolvedor fullstack com 12 anos de experiência em TI, onde atuei como Técnico de Suporte. Sou formado em Análise e Desenvolvimento de Sistemas e estou animado para embarcar na carreira de desenvolvedor.
           </p>
           <p className={estilos.sobre__infos__texto}>
-            Tenho habilidades sólidas em diversas linguagens de programação, incluindo JavaScript, TypeScript, NodeJS, Python e frameworks como React. Além disso, tenho experiência no uso de bancos de dados como MySQL e MongoDB.
+            Tenho habilidades sólidas em diversas linguagens de programação, incluindo JavaScript, TypeScript, NodeJS, Python e frameworks como React. Além disso, tenho experiência no uso de bancos de dados como SQL e MongoDB.
           </p>
           <p className={estilos.sobre__infos__texto}>
             Durante minha jornada como desenvolvedor, participei de projetos significativos, como a criação de um site de lista de presentes para casamentos. Nesse projeto, desenvolvi funcionalidades completas de gerenciamento de presentes e convidados, utilizando tecnologias como Express, TypeScript e React. Também tive a oportunidade de criar uma Pokedex, explorando o desenvolvimento de aplicações voltadas para o mundo dos jogos. Além disso, tenho experiência em desenvolvimento de sites de e-commerce e outras iniciativas interessantes.

@@ -4,7 +4,7 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-import { RxDotFilled } from "react-icons/rx";
+import { HiMoon } from "react-icons/hi";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { Tooltip } from "@mui/material";
@@ -22,6 +22,7 @@ import {
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 import { TbHomeHand } from "react-icons/tb";
+import { HiSun } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 
 export default function Projetos() {
@@ -240,60 +241,12 @@ export default function Projetos() {
         </div>
         <div className={estilos.pontos}>
           {projetos.map((slide, slideIndex) => {
-            let circleComponent = <RxDotFilled />; // Componente padrão
-            if (slideIndex + 1 === currentIndex + 1) {
-              // Verifica se é o índice correspondente ao currentIndex + 1
-              switch (slideIndex) {
-              case 0:
-                circleComponent = (
-                  <TbCircleNumber1 className={estilos.pontos__icons} />
-                );
-                break;
-              case 1:
-                circleComponent = (
-                  <TbCircleNumber2 className={estilos.pontos__icons} />
-                );
-                break;
-              case 2:
-                circleComponent = (
-                  <TbCircleNumber3 className={estilos.pontos__icons} />
-                );
-                break;
-              case 3:
-                circleComponent = (
-                  <TbCircleNumber4 className={estilos.pontos__icons} />
-                );
-                break;
-              case 4:
-                circleComponent = (
-                  <TbCircleNumber5 className={estilos.pontos__icons} />
-                );
-                break;
-              case 5:
-                circleComponent = (
-                  <TbCircleNumber6 className={estilos.pontos__icons} />
-                );
-                break;
-              case 6:
-                circleComponent = (
-                  <TbCircleNumber7 className={estilos.pontos__icons} />
-                );
-                break;
-              case 7:
-                circleComponent = (
-                  <TbCircleNumber8 className={estilos.pontos__icons} />
-                );
-                break;
-              case 8:
-                circleComponent = (
-                  <TbCircleNumber9 className={estilos.pontos__icons} />
-                );
-                break;
-              default:
-                break;
-              }
+            let circleComponent = <HiMoon className={estilos.pontos__moon} />; // Componente padrão
+            if (slideIndex === currentIndex) {
+              circleComponent = (
+                <HiSun className={estilos.pontos__icons} />
+              );
             }
-
             return (
               <div
                 key={slideIndex}

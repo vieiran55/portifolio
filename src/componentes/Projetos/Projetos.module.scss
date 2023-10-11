@@ -285,12 +285,12 @@
 
 .pontos{
   pointer-events: all;
-  @apply flex top-4 justify-center py-2;
+  @apply flex top-4 justify-center py-2 text-2xl cursor-pointer;
   &__icons{
-    @apply text-verdeLoud animate-fadeInLeft;
+    @apply text-verdeLoud fill-green-700 animate-fadeInLeft ;
   }
-  &__pontos{
-    @apply text-2xl cursor-pointer;
+  &__moon{
+    @apply  animate-balanco text-xl;
   }
 }
 
