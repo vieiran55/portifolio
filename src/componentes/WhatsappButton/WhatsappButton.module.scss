@@ -1,0 +1,9 @@
+.conteiner{
+  @apply fixed bottom-2 right-8 z-50 flex flex-col items-center; 
+  &_link{
+    @apply bg-[#29B53E] rounded-full;
+  }
+  &_icon{
+    @apply  w-14 h-14;
+  }
+}

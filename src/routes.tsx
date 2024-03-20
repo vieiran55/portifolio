@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import NavBar from "./componentes/NavBar";
 import Rodape from "./componentes/Rodape";
 import Sobre from "./componentes/Sobre";
+import WhatsappButton from "./componentes/WhatsappButton";
 
 export default function AppRouter() {
   return (
@@ -16,6 +17,7 @@ export default function AppRouter() {
           </Route>
         </Routes>
         <Rodape />
+        <WhatsappButton />
       </Router>
     </div>
   );
