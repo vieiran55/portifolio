@@ -6,7 +6,7 @@
 
 
 .navbar{
-  @apply w-full;
+  @apply w-full fixed top-0 bg-black;
   @media screen and (min-width: $desktop_xl) {
 
   }
