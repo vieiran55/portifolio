@@ -70,7 +70,11 @@ export default function NavBar() {
       </div>
       {/* mobile */}
       <div className={estilos.mobile}>
-        <Stack>
+        <Stack
+          sx={{
+            width: "50px",
+          }}
+        >
           <Button
             ref={anchorRef}
             id="composition-button"
@@ -95,6 +99,7 @@ export default function NavBar() {
             placement="bottom-start"
             transition
             disablePortal
+            sx={{ width: "99vw"}}
           >
             {({ TransitionProps, placement }) => (
               <Grow
@@ -104,13 +109,14 @@ export default function NavBar() {
                     placement === "bottom-start" ? "left top" : "left bottom",
                 }}
               >
-                <Paper>
+                <Paper  sx={{height: "100vw"}}>
                   <ClickAwayListener onClickAway={handleClose}>
                     <MenuList
                       autoFocusItem={open}
                       id="composition-menu"
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
+                      sx={{display: "flex", flexDirection: "column", justifyContent: "space-around", height: "100%"}}
                     >
                       <MenuItem onClick={handleClose}>
                         {" "}
@@ -185,7 +191,10 @@ export default function NavBar() {
           </Popper>
         </Stack>
         <ol className={estilos.mobile__sociais}>
-          <Link to={"https://www.linkedin.com/in/antoniov55/"} className={estilos.mobile__links}>
+          <Link
+            to={"https://www.linkedin.com/in/antoniov55/"}
+            className={estilos.mobile__links}
+          >
             <img
               src={linkedinSmall}
               className={estilos.mobile__links__icons}
@@ -193,7 +202,10 @@ export default function NavBar() {
             />{" "}
             Linkedin
           </Link>
-          <Link to={"https://github.com/vieiran55"} className={estilos.mobile__links}>
+          <Link
+            to={"https://github.com/vieiran55"}
+            className={estilos.mobile__links}
+          >
             <img
               src={gitSmall}
               className={estilos.mobile__links__icons}
@@ -224,57 +236,64 @@ export default function NavBar() {
           </h1>
         </div>
         <ol className={estilos.conteinerDesktop__opcoes}>
-          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+          <li className={estilos.conteinerDesktop__opcoes__links}>
             <ScrollLink
               to="perfil"
               smooth={true}
               duration={1000}
               offset={-200} // Ajuste o valor do deslocamento conforme necessário
             >
-            Perfil
+              Perfil
             </ScrollLink>
           </li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+          <li className={estilos.conteinerDesktop__opcoes__links}>
             <ScrollLink
               to="sobre"
               smooth={true}
               duration={1000}
               offset={-200} // Ajuste o valor do deslocamento conforme necessário
             >
-            Sobre
+              Sobre
             </ScrollLink>
           </li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>                        
+          <li className={estilos.conteinerDesktop__opcoes__links}>
             <ScrollLink
               to="skills"
               smooth={true}
               duration={1000}
               offset={-200} // Ajuste o valor do deslocamento conforme necessário
             >
-            Skills
+              Skills
             </ScrollLink>
           </li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>                        <ScrollLink
-            to="projetos"
-            smooth={true}
-            duration={1000}
-            offset={-200} // Ajuste o valor do deslocamento conforme necessário
-          >
-            Projetos
-          </ScrollLink>
+          <li className={estilos.conteinerDesktop__opcoes__links}>
+            {" "}
+            <ScrollLink
+              to="projetos"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+              Projetos
+            </ScrollLink>
           </li>
-          <li className={estilos.conteinerDesktop__opcoes__links}>                        <ScrollLink
-            to="empresas"
-            smooth={true}
-            duration={1000}
-            offset={-200} // Ajuste o valor do deslocamento conforme necessário
-          >
-            Experiências
-          </ScrollLink>
+          <li className={estilos.conteinerDesktop__opcoes__links}>
+            {" "}
+            <ScrollLink
+              to="empresas"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+              Experiências
+            </ScrollLink>
           </li>
         </ol>
         <ol className={estilos.conteinerDesktop__sociais}>
-          <Link to={"https://www.linkedin.com/in/antoniov55/"} className={estilos.mobile__links}>
+          <Link
+            to={"https://www.linkedin.com/in/antoniov55/"}
+            className={estilos.mobile__links}
+          >
             <img
               src={linkedinSmall}
               className={estilos.mobile__links__icons}
@@ -282,7 +301,10 @@ export default function NavBar() {
             />{" "}
             Linkedin
           </Link>
-          <Link to={"https://github.com/vieiran55"} className={estilos.mobile__links}>
+          <Link
+            to={"https://github.com/vieiran55"}
+            className={estilos.mobile__links}
+          >
             <img
               src={gitSmall}
               className={estilos.mobile__links__icons}
