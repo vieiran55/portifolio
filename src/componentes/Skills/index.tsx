@@ -15,15 +15,11 @@ import { useInView } from "react-intersection-observer";
 import { TbParentheses } from "react-icons/tb";
 
 export default function Skills() {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
 
   return (
     <div
-      ref={ref}
       // className={estilos.conteiner}
-      className={`${inView ? estilos.conteiner2 : estilos.conteiner}`}
+      className={estilos.conteiner}
     >
       <div  className={estilos.skills__titulosConteiner}>
         <div className={estilos.skills__titulos}>

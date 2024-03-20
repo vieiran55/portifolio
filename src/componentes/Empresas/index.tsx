@@ -6,14 +6,11 @@ import experiencias from "../../dados/empresas.json";
 
 export default function Empresas() {
   
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
 
   return (
-    <div ref={ref} 
+    <div 
       // className={estilos.empresas}
-      className={`${inView ? estilos.empresas2 : estilos.empresas}`}
+      className={estilos.empresas}
     >
       <div className={estilos.empresas__titulos}>
         <h1 className={estilos.empresas__titulo}>experiências</h1>

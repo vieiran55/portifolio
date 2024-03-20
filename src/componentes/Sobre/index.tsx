@@ -4,17 +4,14 @@ import { useInView } from "react-intersection-observer";
 import { Link as ScrollLink } from "react-scroll";
 
 export default function Sobre() {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
 
   const wpp = "https://wa.me/5561999981928";
 
 
   return (
-    <div ref={ref}
+    <div 
       // className={estilos.sobre}
-      className={`${inView ? estilos.sobre2 : estilos.sobre}`}
+      className={estilos.sobre}
     >
       <div className={estilos.sobre__infos}>
         <div className={estilos.sobre__infos__titulos}>
