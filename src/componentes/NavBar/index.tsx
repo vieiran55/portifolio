@@ -99,7 +99,6 @@ export default function NavBar() {
             placement="bottom-start"
             transition
             disablePortal
-            sx={{ width: "99vw"}}
           >
             {({ TransitionProps, placement }) => (
               <Grow
@@ -109,14 +108,13 @@ export default function NavBar() {
                     placement === "bottom-start" ? "left top" : "left bottom",
                 }}
               >
-                <Paper  sx={{height: "100vw"}}>
+                <Paper>
                   <ClickAwayListener onClickAway={handleClose}>
                     <MenuList
                       autoFocusItem={open}
                       id="composition-menu"
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
-                      sx={{display: "flex", flexDirection: "column", justifyContent: "space-around", height: "100%"}}
                     >
                       <MenuItem onClick={handleClose}>
                         {" "}
