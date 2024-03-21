@@ -287,7 +287,7 @@ export default function NavBar() {
             </ScrollLink>
           </li>
         </ol>
-        <ol className={estilos.conteinerDesktop__sociais}>
+        {/* <ol className={estilos.conteinerDesktop__sociais}>
           <Link
             to={"https://www.linkedin.com/in/antoniov55/"}
             className={estilos.mobile__links}
@@ -318,7 +318,7 @@ export default function NavBar() {
             />
             Contato
           </Link>
-        </ol>
+        </ol> */}
       </div>
     </div>
   );

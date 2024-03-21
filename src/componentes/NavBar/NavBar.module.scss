@@ -13,7 +13,7 @@
 }
 
 .conteinerDesktop{
-  @apply text-white flex flex-row justify-around py-3 px-2 w-11/12;
+  @apply text-white flex flex-row justify-around py-3 px-2 w-11/12 h-14;
   @media screen and (max-width: 950px) {
     @apply hidden;
   }
@@ -28,15 +28,12 @@
     }
   }
   &__opcoes{
-    @apply flex flex-row  items-center justify-around text-center w-1/2 text-xl;
+    @apply flex flex-row items-center justify-between text-center w-3/5 text-lg max-w-[633px] font-bold;
     &__links{
-      @apply w-full;
+      @apply w-[19%] font-bold;
       &:hover{
-        @apply border-4 border-verdeLoud rounded-md cursor-pointer;
+        @apply border-2 border-verdeLoud rounded-md cursor-pointer;
       }
-    }
-    @media screen and (min-width: $desktop_xl) {
-      @apply text-2xl;
     }
   }
   &__sociais{
