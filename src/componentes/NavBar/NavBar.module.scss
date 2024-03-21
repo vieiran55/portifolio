@@ -32,7 +32,7 @@
     &__links{
       @apply w-[19%] font-bold;
       &:hover{
-        @apply border-2 border-verdeLoud rounded-md cursor-pointer;
+        @apply border-2 text-verdeLoud border-verdeLoud rounded-md cursor-pointer;
       }
     }
   }
@@ -80,17 +80,11 @@
     &__icons{
       @apply h-6 w-6 mx-2;
     }
-    &:hover{
-      @apply border-4 border-verdeLoud rounded-md;
-    }
   }
   &__linksEmail{
     @apply flex flex-row items-center w-full justify-center;
     &__icons{
       @apply h-6 w-6 mx-2;
-    }
-    &:hover{
-      @apply border-4 border-verdeLoud rounded-md;
     }
   }
 }

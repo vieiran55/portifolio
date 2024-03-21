@@ -16,7 +16,7 @@ export default function Perfil(){
       <div className={estilos.perfil__titulos}>
         <h3 className={estilos.perfil__titulos__ola}>Olá, eu sou</h3>
         <h1 className={estilos.perfil__titulos__nome}>{"< Antonio Vieira />"}</h1>
-        <h2 className={estilos.perfil__titulos__prof}>Desenvolvedor Fullstack Jr</h2>
+        <h2 className={estilos.perfil__titulos__prof}>Desenvolvedor Web Fullstack </h2>
       </div>
     </div>
   );

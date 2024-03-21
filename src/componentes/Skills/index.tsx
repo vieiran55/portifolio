@@ -11,8 +11,13 @@ import react from "../../images/skills/react.svg";
 import sass from "../../images/skills/sass.svg";
 import tailwindcss from "../../images/skills/tailwindcss.svg";
 import typescript from "../../images/skills/typescript.svg";
-import { useInView } from "react-intersection-observer";
-import { TbParentheses } from "react-icons/tb";
+import csharp from "../../images/skills/csharp-original.svg";
+import dotnet from "../../images/skills/dot-net-original.svg";
+import dotnetcore from "../../images/skills/dotnetcore-original.svg";
+import linux from "../../images/skills/linux-original.svg";
+import next from "../../images/skills/nextjs-original.svg";
+import postgres from "../../images/skills/postgresql-original.svg";
+import vuejs from "../../images/skills/vuejs-original.svg";
 
 export default function Skills() {
 
@@ -30,21 +35,29 @@ export default function Skills() {
         </div>
         <div></div>
         <div className={estilos.skills}>
-          <img src={react} alt="react" className={estilos.skills__icons} />
-          <img
-            src={javascript}
-            alt="javascript"
-            className={estilos.skills__icons}
-          />
+          <img src={linux} alt="mysql" className={estilos.skills__icons} />
+          <img src={nodejs} alt="nodejs" className={estilos.skills__icons} />
+
           <img
             src={typescript}
             alt="typescript"
             className={estilos.skills__icons}
           />
+          <img
+            src={javascript}
+            alt="javascript"
+            className={estilos.skills__icons}
+          />
           <img src={html5} alt="html5" className={estilos.skills__icons} />
           <img src={css3} alt="css3" className={estilos.skills__icons} />
+          <img src={csharp} alt="mysql" className={estilos.skills__icons} />
           <img src={python} alt="python" className={estilos.skills__icons} />
-          <img src={nodejs} alt="nodejs" className={estilos.skills__icons} />
+          <img src={react} alt="react" className={estilos.skills__icons} />
+          <img src={next} alt="mysql" className={estilos.skills__icons} />
+          <img src={vuejs} alt="mysql" className={estilos.skills__icons} />
+          <img src={dotnet} alt="mysql" className={estilos.skills__icons} />
+          <img src={dotnetcore} alt="mysql" className={estilos.skills__icons} />
+
           <img src={sass} alt="sass" className={estilos.skills__icons} />
           <img
             src={tailwindcss}
@@ -53,7 +66,9 @@ export default function Skills() {
           />
           <img src={mongodb} alt="mongodb" className={estilos.skills__icons} />
           <img src={mysql} alt="mysql" className={estilos.skills__icons} />
-          <img src={sqlite} alt="sqlite" className={estilos.skills__icons} />
+
+          <img src={postgres} alt="mysql" className={estilos.skills__icons} />
+
         </div>
       </div>
     </div>
