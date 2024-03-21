@@ -32,12 +32,45 @@
       @apply text-3xl;
     }
   }
+  &__conteiner{
+    @apply  max-w-[1300px] h-full w-full m-auto relative flex flex-col items-center justify-around z-10;
+    &__itens{
+      @apply max-w-[1190px] m-2 p-2 flex flex-col justify-around items-center;
+      @media screen and (min-width: $tablet) {
+        @apply flex-row flex-wrap;
+      }
+      &__item{
+        @apply flex flex-col justify-around items-center;
+        @media screen and (min-width: $tablet) {
+          @apply w-80;
+        }
+        @media screen and (min-width: $desktop_md) {
+          @apply w-96;
+        }
+        @media screen and (min-width: $desktop_xl) {
+          @apply w-96;
+        }
+        
+      }
+      &__box{
+        @apply bg-white p-1 m-3 rounded-md;
+        &__in{
+          @apply m-1 p-1;
+          &__img{
+            @apply h-60;
+          }
+        }
+      }
+    }
+    &__link{
+      @apply bg-verdeLoud w-11/12 text-center hover:bg-white text-black font-semibold py-2 px-4 hover:border-transparent rounded mb-8;
+      @media screen and (min-width: $desktop_xl) {
+        @apply w-9/12;
+      }
+    }
+  }
 }
 
-
-.conteiner{
-  @apply  max-w-[1300px] h-full w-full m-auto py-16 px-4 relative flex flex-col items-center;
-  }
 
 .react {
   background-image: url("../../images/skills/react.svg");
