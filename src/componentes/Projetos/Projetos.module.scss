@@ -63,7 +63,7 @@
       }
     }
     &__link{
-      @apply bg-verdeLoud w-11/12 text-center hover:bg-white text-black font-semibold py-2 px-4 hover:border-transparent rounded mb-8;
+      @apply cursor-pointer bg-verdeLoud w-11/12 text-center hover:bg-white text-black font-semibold py-2 px-4 hover:border-transparent rounded mb-8;
       @media screen and (min-width: $desktop_xl) {
         @apply w-9/12;
       }

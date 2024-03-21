@@ -19,12 +19,11 @@ interface Props {
 
 export default function EmpresasItens({ experiencias }: Props) {
   // Armazena os índices das experiências ativas
-  const [experienciasAtivas, setExperienciasAtivas] = useState<number[]>([]);
+  const [experienciasAtivas, setExperienciasAtivas] = useState<number[]>([0,1]);
 
   // Função para alternar a ativação de uma experiência
   const toggleExperiencia = (index: number) => {
     setExperienciasAtivas((prevState) => {
-      console.log(prevState);
       // Se o índice já estiver ativo, remove-o da lista de ativos
       if (prevState.includes(index)) {
         return prevState.filter((i) => i !== index);
@@ -56,13 +55,6 @@ export default function EmpresasItens({ experiencias }: Props) {
               className={estilos.circulo}
               onClick={() => toggleExperiencia(index)}
             >
-              {/* Renderiza o ícone apenas se a experiência estiver ativa */}
-              {!experienciasAtivas.includes(index) && (
-                <TfiHandPointDown size={20} className={estilos.notification} />
-              )}
-              {experienciasAtivas.includes(index) && (
-                <GiNinjaStar size={20} className={estilos.estrela} />
-              )}
             </div>
             <div className={estilos.teste}>
               <div className={estilos.conteudo}>
