@@ -14,7 +14,7 @@
   }
   &__conteiner__avatar{
     @media screen and (min-width: $desktop_xl) {
-      @apply py-8 justify-center;
+      @apply pb-40 justify-center;
     }
   }
   &__avatar{
@@ -51,9 +51,12 @@
       }
     }
     &__prof{
-      @apply text-xl py-1;
+      @apply flex text-xl py-1;
       @media screen and (min-width: $tablet) {
         @apply text-4xl ;
+      }
+      &__dev{
+        @apply px-2;
       }
     }
   }
