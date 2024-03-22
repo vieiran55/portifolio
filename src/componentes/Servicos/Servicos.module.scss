@@ -1,0 +1,57 @@
+@import "../../styles/variaveis";
+@import "../../styles/breakpoints";
+
+.conteiner{
+  @apply w-11/12 my-7;
+}
+
+.servicos{
+  @apply flex my-7 flex-col;
+  @media screen and (min-width: $tablet) {
+    @apply w-11/12;
+  }
+  @media screen and (min-width: $desktop_xl) {
+    @apply w-11/12;
+  }
+  &__titulos{
+    @apply flex flex-row mb-2;
+  }
+  &__titulo{
+    @apply text-verdeLoud text-lg font-bold;
+    @media screen and (min-width: $desktop_xl) {
+      @apply text-3xl;
+    }
+  }
+  &__titulo2{
+    @apply text-white text-lg mx-1 flex flex-row items-start;
+    @media screen and (min-width: $desktop_xl) {
+      @apply text-3xl;
+    }
+  }
+}
+
+.servicos__conteudo{
+  @apply flex flex-col;
+  &__conteiner{
+    @apply flex flex-col;
+    &__cards{
+      @apply flex flex-col items-center bg-white text-black p-1 my-2 rounded-lg drop-shadow-md;
+      &__titulos{
+        @apply text-lg font-bold py-1;
+      }
+      &__icon{
+        @apply w-20 h-20;
+      }
+    }
+  }
+  &__modelo__cont{
+    @apply flex flex-col items-center;
+  }
+  &__modelo{
+    @apply w-56 h-80;
+  }
+}
+
+p{
+  @apply text-center
+}

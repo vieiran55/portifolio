@@ -1,5 +1,5 @@
 .conteiner{
-  @apply fixed bottom-2 right-8 z-50 flex flex-col items-center ; 
+  @apply fixed bottom-2 right-8 z-50 flex flex-col items-center drop-shadow-2xl; 
   &_link{
     @apply bg-[#29B53E] rounded-full;
   }

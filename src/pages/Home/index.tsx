@@ -7,6 +7,7 @@ import Sobre from "../../componentes/Sobre";
 import estilos from "./Home.module.scss";
 import { useInView } from "react-intersection-observer";
 import { Outlet } from "react-router-dom";
+import Servicos from "../../componentes/Servicos";
 
 export default function Home() {
   const perfilRef = useRef<HTMLDivElement>(null); // Definindo o tipo de perfilRef
@@ -49,6 +50,9 @@ export default function Home() {
       </div>
       <div id="skills" className={estilos.home__skills}>
         <Skills />
+      </div>
+      <div  id="skills" className={estilos.home__presenca}>
+        <Servicos />
       </div>
       <div id="projetos" className={estilos.home__projetos}>
         <Projetos />

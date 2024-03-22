@@ -14,6 +14,11 @@
   &__skills{
     @apply my-4 bg-black w-full flex justify-center;
   }
+  &__presenca{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(7,77,132,1) 12%);
+    @apply my-4 w-full flex justify-center;
+  }
   &__projetos{
     @apply my-4 bg-black w-full;
   }
