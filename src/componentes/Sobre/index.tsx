@@ -20,7 +20,7 @@ export default function Sobre() {
         </div>
         <div>
           <p className={estilos.sobre__infos__texto}>
-          Olá, sou Antonio, um profissional de Tecnologia da Informação com mais de 10 anos de experiência. Ao longo da minha carreira, concentrei-me em Infraestrutura e Suporte Técnico, e nos últimos dois anos, tenho dedicado meu tempo à transição e especialização como Desenvolvedor de Software.
+          Olá, sou Antonio, um profissional de Tecnologia da Informação com mais de 10 anos de experiência. Ao longo da minha carreira, concentrei-me em Infraestrutura e Suporte Técnico, e desde 2022, tenho dedicado meu tempo à transição e especialização como Desenvolvedor de Software.
           </p>
           <p className={estilos.sobre__infos__texto}>
           Possuo formação em Análise e Desenvolvimento de Sistemas, complementada por participação em programas profissionalizantes de renome, como AceleraDevs, Oracle Next Education e Desenvolvedor FullStack pelo Senai.
