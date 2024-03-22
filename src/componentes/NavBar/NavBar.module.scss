@@ -6,7 +6,7 @@
 
 
 .navbar{
-  @apply w-full fixed top-0 bg-black mt-3 flex flex-col items-center z-50;
+  @apply w-[100vw] fixed top-0 bg-black pt-2 flex flex-col items-center z-50;
   @media screen and (min-width: $desktop_xl) {
 
   }

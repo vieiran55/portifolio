@@ -1,7 +1,12 @@
 .home{
-  @apply max-w-[1600px] flex flex-col items-center w-full my-20;
+  @apply max-w-[1600px] flex flex-col items-center w-full my-16;
   &__perfil{
-    @apply w-[100vw] mb-4 bg-black;
+    background-image: url("../../images/starlight2.jpg");
+    background-repeat: repeat;
+    background-size: 100% auto;
+    background-position: center;
+    transition: 1s;
+    @apply w-[100vw] bg-white -mt-4;
   }
   &__sobre{
     @apply my-4 bg-black w-full;
@@ -16,6 +21,10 @@
     @apply bg-black w-full flex justify-center;
   }
 }
+
+// .home__perfil:hover{
+//   background-position: center right;
+// }
 
 .fadeInUp {
   animation-name: fadeInUp;
