@@ -2,11 +2,10 @@
   @apply max-w-[1600px] flex flex-col items-center w-full my-16;
   &__perfil{
     background-image: url("../../images/starlight2.jpg");
-    background-repeat: repeat;
-    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-size: 110vw 100%;
     background-position: center;
-    transition: 1s;
-    @apply w-[100vw] bg-white -mt-4;
+    @apply w-[100vw] -mt-4;
   }
   &__sobre{
     @apply my-4 bg-black w-full;

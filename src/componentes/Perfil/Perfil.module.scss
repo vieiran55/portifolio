@@ -8,7 +8,7 @@
   background-image: url("../../images/wave.svg");
   background-repeat: no-repeat;
   background-position: bottom;
-  @apply flex flex-col h-[90vh] items-center justify-center w-full mb-7;
+  @apply flex flex-col h-[96vh] items-center justify-center w-full;
   @media screen and (min-width: $tablet) {
     @apply flex-row-reverse justify-evenly;
   }
