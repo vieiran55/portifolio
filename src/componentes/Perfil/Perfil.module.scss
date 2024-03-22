@@ -8,9 +8,9 @@
   background-image: url("../../images/wave.svg");
   background-repeat: no-repeat;
   background-position: bottom;
-  @apply flex flex-col h-[96vh] items-center justify-center w-full;
+  @apply flex flex-col h-[86vh] items-center justify-center w-full;
   @media screen and (min-width: $tablet) {
-    @apply flex-row-reverse justify-evenly;
+    @apply h-[96vh] flex-row-reverse justify-evenly;
   }
   &__conteiner__avatar{
     @media screen and (min-width: $desktop_xl) {
