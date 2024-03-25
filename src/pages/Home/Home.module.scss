@@ -17,10 +17,13 @@
   }
   &__skills{
     background-image: url("../../images/vectteezy.png");
-    background-size: contain;
+    background-size: 70%;
     background-position: bottom right;
     background-repeat: no-repeat;
     @apply my-4 bg-black w-[100vw] flex justify-center;
+    @media screen and (min-width: $tablet) {
+      background-size: contain;
+    }
   }
   &__presenca{
     background: rgb(0,0,0);
