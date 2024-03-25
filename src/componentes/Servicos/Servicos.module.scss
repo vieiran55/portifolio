@@ -29,10 +29,16 @@
 
 .servicos__conteudo{
   @apply flex flex-col;
+  @media screen and (min-width: $desktop_md) {
+    @apply items-center;
+  }
   &__conteiner{
     @apply flex flex-col items-center;
     @media screen and (min-width: $tablet) {
       @apply flex-row justify-around items-center h-[20rem] w-full;
+    }
+    @media screen and (min-width: $desktop_md) {
+      @apply h-[30rem] max-w-[1100px] items-center;
     }
     &__cards{
       @apply flex flex-col items-center text-center bg-cinzaClaro text-black p-1 my-2 rounded-lg drop-shadow-md w-4/5;
@@ -55,6 +61,9 @@
   }
   &__titulo__desktop{
     @apply text-white w-full text-lg text-center;
+    @media screen and (min-width: $desktop_md) {
+      @apply text-3xl h-14;
+    }
   }
   &__destaque__desktop{
     background-image: url("../../images/splash2.svg");
@@ -62,6 +71,10 @@
     background-repeat: no-repeat;
     background-position: center;
     @apply mx-1 px-2 py-2 text-black;
+    @media screen and (min-width: $desktop_md) {
+      background-size: cover;
+      @apply text-3xl h-14;
+    }
   }
   &__cabecalho{
     @apply flex flex-col text-xl text-center;
@@ -89,7 +102,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: bottom;
-      @apply flex flex-col items-center w-40 h-full;
+      @apply flex flex-col items-center w-full h-full;
     }
   }
   &__modelo__box{
