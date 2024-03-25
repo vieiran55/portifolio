@@ -58,7 +58,9 @@ export default function Home() {
         <Projetos />
       </div>
       <div className={estilos.home__empresas} id="empresas">
-        <Empresas />
+        <div className={estilos.home__empresas__in}>
+          <Empresas />
+        </div>
       </div>
     </div>
   );
