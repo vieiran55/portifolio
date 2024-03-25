@@ -5,7 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 
 .empresas{
-  @apply flex flex-col w-11/12 my-7;
+  @apply flex flex-col max-w-[1600px] w-11/12 min-h-[1400px] my-7;
+  @media screen and (min-width: 1900px) {
+    @apply w-full;
+  }
   &__titulos{
     @apply flex flex-row mb-2;
   }
@@ -64,6 +67,9 @@ p {
 
 .empresas__conteiner{
   @apply h-full;
+  @media screen and (min-width: $tablet) {
+    @apply min-h-[1400px] m-auto;
+  }
   @media screen and (min-width: $desktop_xl) {
     @apply h-full;
   }

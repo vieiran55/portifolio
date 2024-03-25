@@ -53,7 +53,7 @@
     &__prof{
       @apply flex text-xl py-1;
       @media screen and (min-width: $tablet) {
-        @apply text-4xl ;
+        @apply text-3xl ;
       }
       &__dev{
         @apply px-2;

@@ -2,7 +2,7 @@
 @import "../../styles/breakpoints";
 
 .conteiner{
-  @apply w-11/12 mt-7;
+  @apply w-11/12 max-w-[1600px] mt-7;
 }
 
 .servicos{

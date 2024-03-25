@@ -11,6 +11,9 @@
 
 .experiencia__list {
 @apply flex flex-col justify-around items-center p-4;
+@media screen and (min-width: $tablet) {
+  @apply min-h-[1400px] min-w-[780px]  m-auto;
+}
 }
 
 .experiencia__item {

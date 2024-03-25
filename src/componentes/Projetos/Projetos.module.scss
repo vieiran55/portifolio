@@ -16,7 +16,7 @@
 
 
 .projetos{
-  @apply flex flex-col w-11/12 my-7;
+  @apply flex flex-col max-w-[1600px] w-11/12 my-7;
   &__titulos{
     @apply flex flex-row mb-2;
   }
