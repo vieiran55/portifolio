@@ -22,10 +22,15 @@ export default function Servicos() {
             <img src={modelo} alt="modelo" className={estilos.servicos__modelo}/>
           </div>
           <div className={estilos.servicos__conteudo__conteiner}>
-            <h1>
-              Por que escolher transformar sua presença online com Antonio
-              Vieira Dev?
-            </h1>
+            <div className={estilos.servicos__conteudo__cabecalho}>
+              <h1 className={estilos.servicos__conteudo__titulo}>
+                Por que escolher transformar sua 
+                <strong className={estilos.servicos__conteudo__destaque}>
+                presença online 
+                </strong>
+                com Antonio Vieira Dev?
+              </h1>
+            </div>
             <div className={estilos.servicos__conteudo__modelo__cont}>
               <img src={modelo} alt="modelo" className={estilos.servicos__conteudo__modelo}/>
             </div>

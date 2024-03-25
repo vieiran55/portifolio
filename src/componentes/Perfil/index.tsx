@@ -25,7 +25,7 @@ export default function Perfil() {
           </h2>
           <Typewriter
             options={{
-              strings: ["Font End", "Back End", "Full Stack"],
+              strings: ["Front End", "Back End", "Full Stack"],
               autoStart: true,
               loop: true,
             }}

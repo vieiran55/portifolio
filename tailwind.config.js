@@ -21,7 +21,9 @@ module.exports = {
         azulMarinho: "#3772FF",
         ateneoBlue: "#0A4D68",
         metallicSeaweed: "#088395",
-        verdeLoud: "#70FF00"
+        verdeLoud: "#70FF00",
+        cinzaMedio: "#BCBCBC",
+        cinzaClaro: "#ebebeb"
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

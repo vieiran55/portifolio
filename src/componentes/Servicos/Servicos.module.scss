@@ -33,9 +33,9 @@
 .servicos__conteudo{
   @apply flex flex-col;
   &__conteiner{
-    @apply flex flex-col;
+    @apply flex flex-col items-center;
     &__cards{
-      @apply flex flex-col items-center bg-white text-black p-1 my-2 rounded-lg drop-shadow-md;
+      @apply flex flex-col items-center text-center bg-cinzaClaro text-black p-1 my-2 rounded-lg drop-shadow-md w-4/5;
       &__titulos{
         @apply text-lg font-bold py-1;
       }
@@ -43,6 +43,19 @@
         @apply w-20 h-20;
       }
     }
+  }
+  &__cabecalho{
+    @apply flex flex-row text-2xl text-center;
+  }
+  &__titulo{
+    @apply text-white;
+  }
+  &__destaque{
+    background-image: url("../../images/splash2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply mx-1 px-2 py-2 text-black;
   }
   &__modelo__cont{
     @apply flex flex-col items-center;
