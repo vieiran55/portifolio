@@ -2,18 +2,28 @@ import { Link } from "react-router-dom";
 import estilos from "./Sobre.module.scss";
 import { useInView } from "react-intersection-observer";
 import { Link as ScrollLink } from "react-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Sobre() {
 
   const wpp = "https://wa.me/5561999981928";
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+  
 
   return (
     <div 
       // className={estilos.sobre}
       className={estilos.sobre}
     >
-      <div className={estilos.sobre__infos}>
+      <div data-aos="fade-down"  className={estilos.sobre__infos}>
         <div className={estilos.sobre__infos__titulos}>
           <h1 className={estilos.sobre__infos__titulo}>sobreMim</h1>
           <h2 className={estilos.sobre__infos__titulo2}>( )</h2>
@@ -39,7 +49,7 @@ export default function Sobre() {
           </p>
         </div>
       </div>
-      <div className={estilos.sobre__cards}>
+      <div data-aos="fade-up"  className={estilos.sobre__cards}>
         <div className={estilos.sobre__cards__conteiner}>
           <div>
             <h1 className={estilos.sobre__cards__titulo}>

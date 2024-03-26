@@ -18,23 +18,30 @@ import linux from "../../images/skills/linux-original.svg";
 import next from "../../images/skills/nextjs-original.svg";
 import postgres from "../../images/skills/postgresql-original.svg";
 import vuejs from "../../images/skills/vuejs-original.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Skills() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div
       // className={estilos.conteiner}
       className={estilos.conteiner}
     >
-      <div  className={estilos.skills__titulosConteiner}>
+      <div className={estilos.skills__titulosConteiner}>
         <div className={estilos.skills__titulos}>
           <h1 className={estilos.skills__titulo}>skills</h1>
-          <h2 className={estilos.skills__titulo2}>
-            ( )
-          </h2>
+          <h2 className={estilos.skills__titulo2}>( )</h2>
         </div>
         <div></div>
-        <div className={estilos.skills}>
+        <div data-aos="zoom-in" className={estilos.skills}>
           <img src={linux} alt="mysql" className={estilos.skills__icons} />
           <img src={nodejs} alt="nodejs" className={estilos.skills__icons} />
 
@@ -68,7 +75,6 @@ export default function Skills() {
           <img src={mysql} alt="mysql" className={estilos.skills__icons} />
 
           <img src={postgres} alt="mysql" className={estilos.skills__icons} />
-
         </div>
       </div>
     </div>

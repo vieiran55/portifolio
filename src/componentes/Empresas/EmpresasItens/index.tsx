@@ -5,6 +5,9 @@ import { MdStarBorderPurple500 } from "react-icons/md";
 import { DiReact } from "react-icons/di";
 import { GiNinjaStar } from "react-icons/gi";
 import { TfiHandPointDown } from "react-icons/tfi";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 interface Experiencia {
   empresa: string;
@@ -34,6 +37,14 @@ export default function EmpresasItens({ experiencias }: Props) {
     });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+  
+
   return (
     <div className={estilos.empresasItens}>
       <div className={estilos.linha__vertical}></div>
@@ -41,6 +52,7 @@ export default function EmpresasItens({ experiencias }: Props) {
         {/* Mapeia as experiências e renderiza cada uma */}
         {experiencias.map((experiencia, index) => (
           <div
+            data-aos="flip-up"
             className={classNames(estilos.experiencia__item, {
               // Aplica a classe 'esquerda' se o índice for par
               [estilos.esquerda]: index % 2 === 0,

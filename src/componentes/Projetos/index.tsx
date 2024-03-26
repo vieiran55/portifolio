@@ -2,6 +2,9 @@ import estilos from "./Projetos.module.scss";
 import { useState } from "react";
 import dados from "../../dados/projetos.json";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Projetos() {
   const skillColors: { [key: string]: string } = {
@@ -16,6 +19,12 @@ export default function Projetos() {
     mongodb: estilos.mongodb,
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div
       // className={estilos.projetos}
@@ -29,7 +38,7 @@ export default function Projetos() {
       <div className={estilos.projetos__conteiner}>
         <div className={estilos.projetos__conteiner__itens}>
           {dados.map((item, index) => (
-            <div key={index} className={estilos.projetos__conteiner__itens__item}>
+            <div data-aos="fade-up" key={index} className={estilos.projetos__conteiner__itens__item}>
               <div
                 className={estilos.projetos__conteiner__itens__box}
               >

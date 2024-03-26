@@ -10,6 +10,7 @@ export default function AppRouter() {
   return (
     <div className={estilos.routes}>
       <Router>
+        <WhatsappButton />
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />}>
@@ -17,7 +18,6 @@ export default function AppRouter() {
           </Route>
         </Routes>
         <Rodape />
-        <WhatsappButton />
       </Router>
     </div>
   );
