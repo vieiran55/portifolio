@@ -158,6 +158,19 @@ export default function NavBar() {
                       <MenuItem onClick={handleClose}>
                         {" "}
                         <ScrollLink
+                          to="servicos"
+                          smooth={true}
+                          duration={500}
+                          offset={-70} // Ajuste o valor do deslocamento conforme necessário
+                          className={estilos.navbarLink}
+                          onClick={handleClose}
+                        >
+                          Serviços
+                        </ScrollLink>
+                      </MenuItem>
+                      <MenuItem onClick={handleClose}>
+                        {" "}
+                        <ScrollLink
                           to="projetos"
                           smooth={true}
                           duration={500}
@@ -262,6 +275,16 @@ export default function NavBar() {
               offset={-200} // Ajuste o valor do deslocamento conforme necessário
             >
               Skills
+            </ScrollLink>
+          </li>
+          <li className={estilos.conteinerDesktop__opcoes__links}>
+            <ScrollLink
+              to="servicos"
+              smooth={true}
+              duration={1000}
+              offset={-200} // Ajuste o valor do deslocamento conforme necessário
+            >
+              Serviços
             </ScrollLink>
           </li>
           <li className={estilos.conteinerDesktop__opcoes__links}>
