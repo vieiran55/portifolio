@@ -49,6 +49,8 @@ export default function Home() {
     };
   }, []);
 
+
+
   return (
     <div className={estilos.home}>
       <Suspense
