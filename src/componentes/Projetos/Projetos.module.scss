@@ -55,9 +55,10 @@
       &__box{
         @apply bg-white p-1 m-3 rounded-md;
         &__in{
-          @apply m-1 p-1;
-          &__img{
-            @apply h-60;
+          overflow: hidden;
+          @apply h-60 w-64 m-1 p-1;
+          &__img:hover{
+            object-position: bottom center;
           }
         }
       }
@@ -70,6 +71,19 @@
     }
   }
 }
+
+.projetos__conteiner__itens__box__in img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: all 2s ease-in-out;
+}
+
+.projetos__conteiner__itens__box__in:hover img{
+  object-position: bottom center;
+}
+
 
 
 .react {
