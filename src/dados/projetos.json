@@ -1,5 +1,37 @@
 [
   {
+    "titulo": "Aprimora Conhecimento",
+    "image": "/images/aprimora.png",
+    "hover": "/images/aprimora.png",
+    "skills": [ "react", "next", "ts", "sass", "tailwind", "node", "mongodb"],
+    "github": "https://aprimoraconhecimento.vercel.app",
+    "site": "https://aprimoraconhecimento.vercel.app"
+  },
+  {
+    "titulo": "Decoder",
+    "image": "/images/decoder.png",
+    "hover": "/images/decoder.png",
+    "skills": [ "react", "next", "ts", "sass", "tailwind", "node", "mongodb"],
+    "github": "https://vieiran55.github.io/decoder/",
+    "site": "https://vieiran55.github.io/decoder/"
+  },
+  {
+    "titulo": "Pousada",
+    "image": "/images/reservation.png",
+    "hover": "/images/reservation.png",
+    "skills": [ "C#", "Aps.Net core"],
+    "github": "https://github.com/vieiran55/pousadavidaplena",
+    "site": "https://github.com/vieiran55/pousadavidaplena"
+  },
+  {
+    "titulo": "Forca",
+    "image": "/images/forca.png",
+    "hover": "/images/forca.png",
+    "skills": [ "Python"],
+    "github": "https://github.com/vieiran55/forca",
+    "site": "https://github.com/vieiran55/forca"
+  },
+  {
     "titulo": "Casamento Gabriela e Antonio",
     "image": "/images/casamentositeAntonioGabi.png",
     "hover": "/images/listadepresentes.png",

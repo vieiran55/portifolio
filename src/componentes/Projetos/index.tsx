@@ -25,6 +25,7 @@ export default function Projetos() {
       once: true,
     });
   }, []);
+
   return (
     <div
       // className={estilos.projetos}
@@ -38,17 +39,27 @@ export default function Projetos() {
       <div className={estilos.projetos__conteiner}>
         <div className={estilos.projetos__conteiner__itens}>
           {dados.map((item, index) => (
-            <div data-aos="fade-up" key={index} className={estilos.projetos__conteiner__itens__item}>
-              <div
-                className={estilos.projetos__conteiner__itens__box}
-              >
+            <div
+              data-aos="fade-up"
+              key={index}
+              className={estilos.projetos__conteiner__itens__item}
+            >
+              <div className={estilos.projetos__conteiner__itens__box}>
                 <div className={estilos.projetos__conteiner__itens__box__in}>
-                  <img src={item.image} alt={item.titulo} className={estilos.projetos__conteiner__itens__box__in__img}/>
+                  <img
+                    src={item.image}
+                    alt={item.titulo}
+                    className={estilos.projetos__conteiner__itens__box__in__img}
+                  />
                 </div>
               </div>
-              <div className={estilos.projetos__conteiner__link}>
-                <Link to={item.site}>VER PROJETO</Link>
-              </div>
+
+              <Link
+                className={estilos.projetos__conteiner__link}
+                to={item.site}
+              >
+                VER PROJETO
+              </Link>
             </div>
           ))}
         </div>

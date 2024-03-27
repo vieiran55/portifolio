@@ -68,6 +68,9 @@
       @media screen and (min-width: $desktop_xl) {
         @apply w-9/12;
       }
+      &__to{
+        @apply w-full h-full;
+      }
     }
   }
 }

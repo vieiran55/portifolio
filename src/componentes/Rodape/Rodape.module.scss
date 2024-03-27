@@ -36,6 +36,7 @@
   &__links{
     @apply flex flex-row my-2 items-center cursor-pointer;
     &__iconsArrow{
+      transform: rotate(-40deg);
       @apply fill-[#d8623c] mr-2 w-10 h-5;
     }
     &__icons{
