@@ -18,6 +18,11 @@ import linux from "../../images/skills/linux-original.svg";
 import next from "../../images/skills/nextjs-original.svg";
 import postgres from "../../images/skills/postgresql-original.svg";
 import vuejs from "../../images/skills/vuejs-original.svg";
+import docker from "../../images/skills/docker.svg";
+
+import java from "../../images/skills/java.svg";
+import spring from "../../images/skills/spring.svg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -42,8 +47,8 @@ export default function Skills() {
         </div>
         <div></div>
         <div data-aos="zoom-in" className={estilos.skills}>
-          <img src={linux} alt="mysql" className={estilos.skills__icons} />
-          <img src={nodejs} alt="nodejs" className={estilos.skills__icons} />
+          <img src={java} alt="java" className={estilos.skills__icons} />
+          <img src={spring} alt="spring" className={estilos.skills__icons} />
 
           <img
             src={typescript}
@@ -55,26 +60,28 @@ export default function Skills() {
             alt="javascript"
             className={estilos.skills__icons}
           />
-          <img src={html5} alt="html5" className={estilos.skills__icons} />
-          <img src={css3} alt="css3" className={estilos.skills__icons} />
-          <img src={csharp} alt="mysql" className={estilos.skills__icons} />
-          <img src={python} alt="python" className={estilos.skills__icons} />
           <img src={react} alt="react" className={estilos.skills__icons} />
           <img src={next} alt="mysql" className={estilos.skills__icons} />
-          <img src={vuejs} alt="mysql" className={estilos.skills__icons} />
-          <img src={dotnet} alt="mysql" className={estilos.skills__icons} />
-          <img src={dotnetcore} alt="mysql" className={estilos.skills__icons} />
 
-          <img src={sass} alt="sass" className={estilos.skills__icons} />
+          <img src={html5} alt="html5" className={estilos.skills__icons} />
+          <img src={css3} alt="css3" className={estilos.skills__icons} />
+
           <img
             src={tailwindcss}
             alt="tailwindcss"
             className={estilos.skills__icons}
           />
+
           <img src={mongodb} alt="mongodb" className={estilos.skills__icons} />
           <img src={mysql} alt="mysql" className={estilos.skills__icons} />
+          <img
+            src={postgres}
+            alt="postgres"
+            className={estilos.skills__icons}
+          />
 
-          <img src={postgres} alt="mysql" className={estilos.skills__icons} />
+          <img src={linux} alt="myslinuxl" className={estilos.skills__icons} />
+          <img src={docker} alt="docker" className={estilos.skills__icons} />
         </div>
       </div>
     </div>

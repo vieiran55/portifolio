@@ -1,15 +1,32 @@
 [
   {
-    "empresa": "Exército Brasileiro - 2º Centro de Geoinformação (2º CGEO)",
-    "cargo": "3º Sargento",
-    "periodo": "Mar/2011 - Fev/2019",
-    "descricao": "Como 3º Sargento no Exército Brasileiro, atuei como administrador de servidores em ambiente Linux, sendo responsável pelo gerenciamento e configuração dos servidores DHCP, SAMBA, SQUID, NAGIUS, LDAP, WEBMAIL, SPED e SISBOL. Além disso, liderei a manutenção do site e da intranet da OM, garantindo o pleno funcionamento e atualização dos mesmos. Tive a responsabilidade de realizar a configuração de switches de borda, garantindo a estabilidade e segurança da infraestrutura de rede. Além disso, fui encarregado da manutenção de storages e VMs (máquinas virtuais), assegurando a disponibilidade e desempenho adequados dos sistemas. Desempenhei um papel fundamental na implementação e manutenção de servidores de sistema de segurança, garantindo a proteção dos dados e a integridade das informações. Também fui responsável pela manutenção das máquinas de todo o parque, assegurando o pleno funcionamento dos equipamentos. Além das atividades técnicas, também desempenhei funções administrativas relacionadas à administração pública, como participação em licitações e fiscalização de contratos. Também ministrei instruções de aulas de informática, compartilhando meus conhecimentos e auxiliando no desenvolvimento das habilidades dos colegas."
+    "empresa": "Tribunal de Justiça de Goiás / Universidade Federal de Goiás",
+    "cargo": "Desenvolvedor Full Stack - Residente em TI",
+    "periodo": "Jan/2025 - Atual",
+    "descricao": "Atuação no desenvolvimento e evolução de sistemas administrativos e orçamentários de alta complexidade, com foco principal em backend Java utilizando Spring Boot e integração com frontend em React. Desenvolvimento de funcionalidades completas para domínios como débitos, parcelas, orçamento e licitações. Implementação de refatorações e automações nos fluxos de atualização de parcelas e débitos, incluindo cálculos baseados em índices financeiros e sincronização automática de status, aumentando a confiabilidade e integridade dos dados. Criação e manutenção de APIs REST com contratos bem definidos, padronização de nomenclaturas e integração eficiente entre backend e frontend. Atuação em hotfixes, correções de regras de negócio e ajustes estruturais, garantindo estabilidade em ambientes de constante evolução. Implementação de segurança e autenticação com Keycloak e Spring Security, assegurando proteção de rotas e controle de acesso."
+  },
+  {
+    "empresa": "Central IT",
+    "cargo": "Analista Desenvolvedor de Sistemas Pleno",
+    "periodo": "Jul/2024 - Atual",
+    "descricao": "Desenvolvimento de aplicações web modernas, escaláveis e performáticas, com forte foco em experiência do usuário, qualidade de código e integração eficiente entre frontend e backend. Construção de interfaces ricas, acessíveis e responsivas utilizando Angular, JavaScript, TypeScript, HTML5 e CSS3, seguindo arquitetura orientada a componentes e boas práticas de UX/UI. Integração com APIs REST, gerenciamento de estados, formulários, validações e fluxos complexos de dados. Desenvolvimento de APIs RESTful com Node.js, aplicando princípios de Clean Code e arquitetura em camadas. Implementação de autenticação, autorização e comunicação entre sistemas, garantindo segurança e confiabilidade. Criação e manutenção de WebServices para integração entre aplicações corporativas. Atuação em modelagem e manipulação de dados em PostgreSQL, desenvolvimento de consultas SQL complexas e otimização para performance, assegurando integridade e consistência dos dados. Participação ativa em ambientes ágeis e colaborativos, contribuindo para manutenibilidade e evolução técnica das soluções."
+  },
+  {
+    "empresa": "Instituto Federal de Goiás",
+    "cargo": "Pesquisador Desenvolvedor de Software",
+    "periodo": "Mai/2024 - Mai/2025",
+    "descricao": "Atuação como Desenvolvedor Full Stack no ecossistema do ID Jovem, contribuindo para a evolução de sistemas web e mobile utilizados em escala nacional. Desenvolvimento e manutenção de APIs REST em Laravel, integradas a React e React Native (Expo), garantindo consistência entre portal web, painel administrativo e aplicativo mobile. Liderança na migração de funcionalidades de código legado para uma nova arquitetura, modernizando o fluxo de emissão da carteirinha do ID Jovem e elevando níveis de performance, segurança e manutenibilidade. Implementação de integrações com serviços governamentais como Gov.br, Receita Federal e CadÚnico, automatizando a obtenção de CPF e dados do cidadão. Desenvolvimento de soluções de segurança e integridade de dados, incluindo mecanismos de descadastro com UUID/hash único e validação dupla. Atuação em hotfixes críticos, correções de banco de dados e alinhamento de schemas entre ambientes por meio de migrations. Contribuição direta para UX, acessibilidade e responsividade seguindo o Gov.br Design System. Apoio à modernização do aplicativo mobile, dockerização do ambiente, automação de build e geração de APK. Participação em code reviews, discussões arquiteturais, testes automatizados e documentação técnica."
   },
   {
     "empresa": "Aprimora Conhecimento",
-    "cargo": "Desenvolvedor Web FullStack",
-    "periodo": "Jan/2024",
-    "descricao": "Desenvolvimento de APIs robustas e eficientes utilizando TypeScript, JavaScript, Node.js, Prisma e Express para fornecer soluções escaláveis e de alto desempenho. Colaboração no desenvolvimento e manutenção de sistemas fullstack, utilizando tecnologias como React.js para criar interfaces modernas e interativas. Implementação de bases de dados, incluindo MySQL e PostgreSQL, garantindo eficiência no armazenamento e recuperação de dados. Experiência em desenvolvimento com React.js, Next.js e Vue.js para criar interfaces de usuário dinâmicas e responsivas. Participação ativa em reuniões de equipe, contribuindo para o planejamento e execução de projetos. Conhecimento em gerenciamento de banco de dados, otimização de consultas e modelagem de dados. Utilização de metodologias ágeis para melhorar a eficiência e a entrega de projetos."
+    "cargo": "Desenvolvedor Full Stack (Voluntário)",
+    "periodo": "Jan/2024 - Jun/2024",
+    "descricao": "Desenvolvimento de APIs robustas e escaláveis utilizando TypeScript, JavaScript, Node.js, Prisma e Express. Colaboração no desenvolvimento e manutenção de sistemas full stack, utilizando React.js e Next.js para criação de interfaces modernas e interativas. Criação de landing pages e implementação de bases de dados relacionais com MySQL e PostgreSQL, garantindo eficiência no armazenamento e recuperação de dados. Atuação em gerenciamento de banco de dados, otimização de consultas e modelagem de dados. Participação ativa em reuniões de equipe, planejamento e execução de projetos utilizando metodologias ágeis."
+  },
+  {
+    "empresa": "Exército Brasileiro - 2º Centro de Geoinformação (2º CGEO)",
+    "cargo": "3º Sargento Técnico de Informática",
+    "periodo": "Mar/2011 - Fev/2019",
+    "descricao": "Atuação como técnico de informática e responsável pela Seção de Informática do 2º Centro de Geoinformação. Experiência em desenvolvimento front-end e back-end, manutenção de redes e virtualização de serviços. Administração e configuração de servidores Windows e Linux, incluindo serviços como Samba, OpenLDAP, Proxy, DHCP e DNS. Manutenção de banco de dados, suporte ao usuário e gestão do parque computacional. Implementação e manutenção de soluções de VOIP e sistemas baseados em Joomla. Responsável pela gestão de pessoal, apoio administrativo, participação em licitações e fiscalização de contratos, unindo atividades técnicas e administrativas em ambiente público."
   }
-  
 ]

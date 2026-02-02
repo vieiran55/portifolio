@@ -7,7 +7,6 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Sobre() {
-
   const wpp = "https://wa.me/5561999981928";
 
   useEffect(() => {
@@ -16,44 +15,78 @@ export default function Sobre() {
       once: true,
     });
   }, []);
-  
 
   return (
-    <div 
+    <div
       // className={estilos.sobre}
       className={estilos.sobre}
     >
-      <div data-aos="fade-down"  className={estilos.sobre__infos}>
+      <div data-aos="fade-down" className={estilos.sobre__infos}>
         <div className={estilos.sobre__infos__titulos}>
           <h1 className={estilos.sobre__infos__titulo}>sobreMim</h1>
           <h2 className={estilos.sobre__infos__titulo2}>( )</h2>
         </div>
         <div>
           <p className={estilos.sobre__infos__texto}>
-          Olá, sou Antonio, um profissional de Tecnologia da Informação com mais de 10 anos de experiência. Ao longo da minha carreira, concentrei-me em Infraestrutura e Suporte Técnico, e desde 2022, tenho dedicado meu tempo à transição e especialização como Desenvolvedor de Software.
+            Olá, sou Antônio, Desenvolvedor Full Stack com sólida experiência em
+            backend e integração de sistemas, atuando principalmente com Java
+            (Spring Boot), PHP (Laravel), TypeScript, Angular e React. Possuo
+            mais de 10 anos de experiência em Tecnologia da Informação, com uma
+            trajetória que une infraestrutura, suporte, segurança e
+            desenvolvimento de software.
           </p>
+
           <p className={estilos.sobre__infos__texto}>
-          Possuo formação em Análise e Desenvolvimento de Sistemas, complementada por participação em programas profissionalizantes de renome, como AceleraDevs, Oracle Next Education e Desenvolvedor FullStack pelo Senai.
+            Sou formado em Análise e Desenvolvimento de Sistemas, com
+            pós-graduação em Gestão de Tecnologia da Informação e Gestão da
+            Qualidade de Software, além de residência em Tecnologia da
+            Informação pela UFG em parceria com o Tribunal de Justiça de Goiás.
+            Também possuo certificação ITIL 4 Foundation, reforçando minha visão
+            orientada a processos, qualidade e entrega de valor.
           </p>
+
           <p className={estilos.sobre__infos__texto}>
-          Minhas habilidades abrangem uma ampla gama de linguagens de programação, incluindo JavaScript, TypeScript, NodeJS, C#, e domino frameworks como React, Next, Vue, NestJs, Express e Asp .Net Core. Além disso, tenho experiência sólida no uso de bancos de dados relacionais, como MySQL e PostgreSQL, bem como bancos de dados NoSQL, como MongoDB.
+            Atualmente atuo no desenvolvimento e evolução de sistemas
+            corporativos e governamentais, participando de todo o ciclo de vida
+            das aplicações: levantamento de requisitos, definição de regras de
+            negócio, implementação de APIs REST, integrações com serviços
+            externos, segurança, refatorações e sustentação. Tenho forte atuação
+            em sistemas administrativos, orçamentários e de grande impacto
+            social.
           </p>
+
           <p className={estilos.sobre__infos__texto}>
-          Estou comprometido com o aprendizado contínuo e o aprimoramento das minhas habilidades técnicas, sempre buscando oportunidades para contribuir de forma significativa em projetos desafiadores e dinâmicos na área de desenvolvimento de software.
+            Minhas competências técnicas incluem desenvolvimento backend com
+            Java Spring Boot e Laravel, frontend moderno com Angular, React e
+            TypeScript, além de experiência com bancos de dados relacionais como
+            PostgreSQL e MySQL. Também atuo com Docker, Linux, versionamento com
+            Git e práticas de Clean Code, arquitetura em camadas e APIs bem
+            definidas.
           </p>
+
           <p className={estilos.sobre__infos__texto}>
-            Além das minhas habilidades técnicas, estou em constante aprimoramento do meu inglês por meio de estudos regulares. Acredito que a fluência no idioma é um diferencial importante para acompanhar as tendências globais da área de desenvolvimento de software e colaborar em projetos internacionais.
+            Tenho experiência com autenticação e segurança de aplicações,
+            incluindo integração com Keycloak e Spring Security, além de atuação
+            em ambientes ágeis, colaborativos e orientados à qualidade,
+            performance e manutenibilidade. Valorizo código limpo, soluções
+            simples para problemas complexos e comunicação clara entre times.
           </p>
+
           <p className={estilos.sobre__infos__texto}>
-            Se você está procurando um desenvolvedor dedicado, apaixonado por tecnologia, com experiência em Linux e um histórico sólido em TI, estou ansioso para conectar e contribuir para o sucesso da sua equipe.
+            Estou em constante evolução técnica e aprimoramento do inglês,
+            buscando sempre aprender novas tecnologias, boas práticas e
+            contribuir de forma significativa em projetos desafiadores. Se você
+            procura um desenvolvedor comprometido, com visão sistêmica e
+            experiência real em produção, fico à disposição para conectar e
+            colaborar.
           </p>
         </div>
       </div>
-      <div data-aos="fade-up"  className={estilos.sobre__cards}>
+      <div data-aos="fade-up" className={estilos.sobre__cards}>
         <div className={estilos.sobre__cards__conteiner}>
           <div>
             <h1 className={estilos.sobre__cards__titulo}>
-              Desenvolvedor Fullstack Jr.
+              Desenvolvedor Fullstack
             </h1>
             <ScrollLink to={"projetos"} className={estilos.sobre__cards__link}>
               Projetos
@@ -63,9 +96,7 @@ export default function Sobre() {
         </div>
         <div className={estilos.sobre__cards__conteiner}>
           <div>
-            <h1 className={estilos.sobre__cards__titulo}>
-              Freelancer
-            </h1>
+            <h1 className={estilos.sobre__cards__titulo}>Freelancer</h1>
             <Link to={wpp} className={estilos.sobre__cards__link}>
               Entre em contato comigo!
             </Link>

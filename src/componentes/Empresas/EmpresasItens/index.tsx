@@ -22,7 +22,9 @@ interface Props {
 
 export default function EmpresasItens({ experiencias }: Props) {
   // Armazena os índices das experiências ativas
-  const [experienciasAtivas, setExperienciasAtivas] = useState<number[]>([0,1]);
+  const [experienciasAtivas, setExperienciasAtivas] = useState<number[]>([
+    0, 1, 2, 3, 4,
+  ]);
 
   // Função para alternar a ativação de uma experiência
   const toggleExperiencia = (index: number) => {
@@ -43,7 +45,6 @@ export default function EmpresasItens({ experiencias }: Props) {
       once: true,
     });
   }, []);
-  
 
   return (
     <div className={estilos.empresasItens}>
@@ -59,15 +60,14 @@ export default function EmpresasItens({ experiencias }: Props) {
               // Aplica a classe 'direita' se o índice for ímpar
               [estilos.direita]: index % 2 !== 0,
               // Aplica a classe 'ativa' se o índice estiver na lista de ativos
-              [estilos.ativa]: experienciasAtivas.includes(index)
+              [estilos.ativa]: experienciasAtivas.includes(index),
             })}
             key={index}
           >
             <div
               className={estilos.circulo}
               onClick={() => toggleExperiencia(index)}
-            >
-            </div>
+            ></div>
             <div className={estilos.teste}>
               <div className={estilos.conteudo}>
                 {/* Renderiza o conteúdo da experiência apenas se estiver ativa */}
