@@ -68,7 +68,7 @@ export default function NavBar() {
           <a className={estilos.destaqueTitulo__2}>VIEIRA</a>
         </h1>
       </div>
-      {/* mobile */}
+      {/* mobile aqui*/}
       <div className={estilos.mobile}>
         <Stack
           sx={{
