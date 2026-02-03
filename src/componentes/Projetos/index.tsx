@@ -1,5 +1,4 @@
 import estilos from "./Projetos.module.scss";
-import { useState } from "react";
 import dados from "../../dados/projetos.json";
 import { Link } from "react-router-dom";
 import AOS from "aos";
@@ -7,17 +6,6 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Projetos() {
-  const skillColors: { [key: string]: string } = {
-    html: estilos.html,
-    css: estilos.css,
-    js: estilos.js,
-    react: estilos.react,
-    ts: estilos.ts,
-    sass: estilos.sass,
-    tailwind: estilos.tailwind,
-    node: estilos.node,
-    mongodb: estilos.mongodb,
-  };
 
   useEffect(() => {
     AOS.init({

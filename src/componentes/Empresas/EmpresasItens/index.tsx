@@ -1,10 +1,6 @@
 import { useState } from "react";
 import classNames from "classnames";
 import estilos from "./EmpresasItens.module.scss";
-import { MdStarBorderPurple500 } from "react-icons/md";
-import { DiReact } from "react-icons/di";
-import { GiNinjaStar } from "react-icons/gi";
-import { TfiHandPointDown } from "react-icons/tfi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";

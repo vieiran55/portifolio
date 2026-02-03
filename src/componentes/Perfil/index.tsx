@@ -1,6 +1,5 @@
 import estilos from "./Perfil.module.scss";
 import avatar from "../../images/antonio.png";
-import { useInView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css";

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import estilos from "./Sobre.module.scss";
-import { useInView } from "react-intersection-observer";
 import { Link as ScrollLink } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";

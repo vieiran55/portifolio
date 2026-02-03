@@ -13,9 +13,6 @@ import "tw-elements";
 import gitSmall from "../../images/githubSmall.png";
 import linkedinSmall from "../../images/linkedinSmall.png";
 import emailSmall from "../../images/emailSmall.png";
-import estilosProjetos from "../Projetos/Projetos.module.scss";
-import Empresas from "../Empresas";
-import Projetos from "../Projetos";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 
