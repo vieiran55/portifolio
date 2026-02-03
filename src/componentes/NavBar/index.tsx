@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -51,7 +51,7 @@ export default function NavBar() {
   const prevOpen = useRef(open);
   useEffect(() => {
     if (prevOpen.current === true && open === false) {
-      anchorRef.current!.focus();
+      anchorRef.current?.focus();
     }
 
     prevOpen.current = open;
