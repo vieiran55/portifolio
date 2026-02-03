@@ -14,12 +14,12 @@
   {
     "empresa": "Instituto Federal de Goiás",
     "cargo": "Pesquisador Desenvolvedor de Software",
-    "periodo": "Mai/2024 - Mai/2025",
+    "periodo": "Mai/2024 - Fev/2026",
     "descricao": "Atuação como Desenvolvedor Full Stack no ecossistema do ID Jovem, contribuindo para a evolução de sistemas web e mobile utilizados em escala nacional. Desenvolvimento e manutenção de APIs REST em Laravel, integradas a React e React Native (Expo), garantindo consistência entre portal web, painel administrativo e aplicativo mobile. Liderança na migração de funcionalidades de código legado para uma nova arquitetura, modernizando o fluxo de emissão da carteirinha do ID Jovem e elevando níveis de performance, segurança e manutenibilidade. Implementação de integrações com serviços governamentais como Gov.br, Receita Federal e CadÚnico, automatizando a obtenção de CPF e dados do cidadão. Desenvolvimento de soluções de segurança e integridade de dados, incluindo mecanismos de descadastro com UUID/hash único e validação dupla. Atuação em hotfixes críticos, correções de banco de dados e alinhamento de schemas entre ambientes por meio de migrations. Contribuição direta para UX, acessibilidade e responsividade seguindo o Gov.br Design System. Apoio à modernização do aplicativo mobile, dockerização do ambiente, automação de build e geração de APK. Participação em code reviews, discussões arquiteturais, testes automatizados e documentação técnica."
   },
   {
     "empresa": "Aprimora Conhecimento",
-    "cargo": "Desenvolvedor Full Stack (Voluntário)",
+    "cargo": "Desenvolvedor Full Stack",
     "periodo": "Jan/2024 - Jun/2024",
     "descricao": "Desenvolvimento de APIs robustas e escaláveis utilizando TypeScript, JavaScript, Node.js, Prisma e Express. Colaboração no desenvolvimento e manutenção de sistemas full stack, utilizando React.js e Next.js para criação de interfaces modernas e interativas. Criação de landing pages e implementação de bases de dados relacionais com MySQL e PostgreSQL, garantindo eficiência no armazenamento e recuperação de dados. Atuação em gerenciamento de banco de dados, otimização de consultas e modelagem de dados. Participação ativa em reuniões de equipe, planejamento e execução de projetos utilizando metodologias ágeis."
   },
